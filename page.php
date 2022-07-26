@@ -1,5 +1,5 @@
 <?php
-require_once(dirname(__FILE__) . '/inc/images.php');
+// require_once(dirname(__FILE__) . '/inc/images.php');
 
 /**
  * The template for displaying all pages.
@@ -29,6 +29,6 @@ $context['post'] = $timber_post;
 
 
 
-GoodmotionStarter\inc\images\prefetch_images($timber_post->meta("page_hero"));
+// GoodmotionStarter\inc\images\prefetch_images($timber_post->meta("page_hero"));
 
 Timber::render(array('page-' . $timber_post->post_name . '.twig', 'page.twig'), $context);

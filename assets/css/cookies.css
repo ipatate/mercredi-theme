@@ -4,8 +4,8 @@
   --gdpr-bg-modal: #fefefe;
   --gdpr-shadow-modal: #bababa;
   --gdpr-bg-mask: rgba(0, 0, 0, 0.1);
-  --gdpr-color-primary: #450B40;
-  --gdpr-color-success: #450B40;
+  --gdpr-color-primary: #450b40;
+  --gdpr-color-success: #450b40;
   --gdpr-color-info: #5bc0de;
   --gdpr-color-warning: #f0ad4e;
   --gdpr-color-danger: #d9534f;
@@ -30,7 +30,6 @@
 #gdpr-cookie #gm_modal_title {
   @apply text-gray-800;
 }
-
 
 #gdpr-cookie .gdpr_modal_head-content {
   @apply border-b border-gray-300;
@@ -81,7 +80,7 @@
   div.gdpr_banner-content
   div.gdpr_banner-actions
   button.gdpr_btn-success:hover {
-    @apply border rounded border-accent;
+  @apply border rounded border-accent;
   color: var(--gdpr-font-white);
 }
 
@@ -89,7 +88,7 @@
   div.gdpr_banner-content
   div.gdpr_banner-actions
   button.gdpr_btn-default {
-    @apply ml-3 text-gray-800 bg-transparent border border-gray-800 rounded;
+  @apply ml-3 text-gray-800 bg-transparent border border-gray-800 rounded;
 }
 
 #gdpr-cookie
@@ -122,7 +121,6 @@
   }
 }
 
-
 @media screen and (max-width: 769px) {
   #gdpr-cookie button {
     padding: 0.4rem 0.9rem;
@@ -136,7 +134,7 @@
     @apply justify-center;
   }
 
-   .gdpr_banner-content {
+  .gdpr_banner-content {
     @apply flex-wrap max-w-full;
   }
   .gdpr_banner-actions {

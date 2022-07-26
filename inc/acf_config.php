@@ -1,6 +1,6 @@
 <?php
 
-namespace GoodmotionStarter\inc\acf_config;
+namespace Goodmotion\inc\acf_config;
 
 function register_acf_options_pages()
 {
@@ -22,20 +22,6 @@ function register_acf_options_pages()
       'capability' => 'edit_posts',
       'parent_slug'     => 'general-settings',
     ]);
-
-//    acf_add_options_sub_page([
-//      'page_title' => __('Text content', 'goodmotion-theme'),
-//      'capability' => 'edit_posts',
-//      // 'position' => '50',
-//      'parent_slug'    => 'general-settings',
-//    ]);
-//
-//    acf_add_options_sub_page([
-//      'page_title' => __('Terms and conditions', 'goodmotion-theme'),
-//      'capability' => 'edit_posts',
-//      // 'position' => '50',
-//      'parent_slug'    => 'general-settings',
-//    ]);
   }
 }
 

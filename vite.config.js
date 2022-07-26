@@ -4,15 +4,17 @@ import legacy from '@vitejs/plugin-legacy'
 import liveReload from 'vite-plugin-live-reload'
 
 // find theme dir name
-const _path = process.cwd().split(sep)
-const themeDir = _path[_path.length - 1]
+export function getThemDir() {
+  const _path = process.cwd().split(sep)
+  return _path[_path.length - 1]
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     liveReload([__dirname + '/**/*.php', __dirname + '/**/*.twig']),
     legacy({
-      targets: ['ie >= 11'],
+      targets: ['defaults', 'ie >= 11'],
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
       polyfills: [],
       modernPolyfills: [],
@@ -20,8 +22,8 @@ export default defineConfig({
   ],
   base:
     process.env.APP_ENV === 'development'
-      ? `/wp-content/themes/${themeDir}/`
-      : `/wp-content/themes/${themeDir}/dist/`,
+      ? `/wp-content/themes/${getThemDir()}/`
+      : `/wp-content/themes/${getThemDir()}/dist/`,
   root: '',
   build: {
     // output dir for production build
@@ -39,12 +41,9 @@ export default defineConfig({
     port: 3000,
     https: false,
     hmr: {
-      host: 'localhost',
-    },
-  },
-  resolve: {
-    alias: {
-      vue: 'vue/dist/vue.esm-bundler.js',
+      protocol: 'ws',
+      port: 3000,
+      // host: 'localhost',
     },
   },
 })

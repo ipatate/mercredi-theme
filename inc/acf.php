@@ -1,6 +1,6 @@
 <?php
 
-namespace GoodmotionStarter\inc\acf;
+namespace Goodmotion\inc\acf;
 
 function useACF()
 {

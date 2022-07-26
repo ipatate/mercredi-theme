@@ -1,10 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: [
-    './**/*.{js,jsx,ts,tsx,vue,php,twig,html}',
-    '../../plugins/**/*.{js,jsx,ts,tsx,vue,php,twig,html}',
-  ],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./**/*.{php,twig,html}', './assets/*.{js,jsx,ts,tsx,vue}'],
   theme: {
     fontFamily: {
       sans: ['Roboto', 'helvetica', 'arial', 'sans-serif'],

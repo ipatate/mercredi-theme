@@ -20,20 +20,22 @@ if (file_exists($composer_autoload)) {
   $timber = new Timber\Timber();
 }
 
-require_once(dirname(__FILE__) . '/inc/assets.php');
-require_once(dirname(__FILE__) . '/inc/editor.php');
-require_once(dirname(__FILE__) . '/inc/disable.php');
-require_once(dirname(__FILE__) . '/inc/disable_comments.php');
-require_once(dirname(__FILE__) . '/inc/disable_post.php');
-require_once(dirname(__FILE__) . '/inc/menu.php');
-require_once(dirname(__FILE__) . '/inc/text_domain.php');
-require_once(dirname(__FILE__) . '/inc/acf.php');
-require_once(dirname(__FILE__) . '/inc/acf_config.php');
-require_once(dirname(__FILE__) . '/inc/shortcode.php');
-require_once(dirname(__FILE__) . '/custom-post-types/event.php');
-require_once(dirname(__FILE__) . '/custom-post-types/product.php');
-require_once(dirname(__FILE__) . '/custom-post-types/menu.php');
+require_once dirname(__FILE__) . '/inc/assets.php';
+require_once dirname(__FILE__) . '/inc/gutenberg/index.php';
+require_once dirname(__FILE__) . '/inc/disable.php';
+require_once dirname(__FILE__) . '/inc/disable_comments.php';
+require_once dirname(__FILE__) . '/inc/menu.php';
+require_once dirname(__FILE__) . '/inc/text_domain.php';
+require_once dirname(__FILE__) . '/inc/acf.php';
+require_once dirname(__FILE__) . '/inc/acf_config.php';
+require_once dirname(__FILE__) . '/inc/images.php';
+require_once dirname(__FILE__) . '/inc/post.php';
 require_once(dirname(__FILE__) . '/inc/cookies.php');
+
+require_once(dirname(__FILE__) . '/inc/shortcode.php');
+require_once(dirname(__FILE__) . '/post-types/event.php');
+require_once(dirname(__FILE__) . '/post-types/product.php');
+require_once(dirname(__FILE__) . '/post-types/menu.php');
 
 /**
  * This ensures that Timber is loaded and available as a PHP class.
@@ -203,87 +205,87 @@ new StarterSite();
 /** test */
 
 /** BG lazy load */
-if (!function_exists('file_get_html')) {
-  require_once(dirname(__FILE__) . '/helpers/simplehtmldom/simple_html_dom.php');
-}
+// if (!function_exists('file_get_html')) {
+//   require_once(dirname(__FILE__) . '/helpers/simplehtmldom/simple_html_dom.php');
+// }
 
 
-function bgImageLazy($content)
-{
-  $hasWebP = (strpos($_SERVER['HTTP_ACCEPT'], 'image/webp') !== false || strpos($_SERVER['HTTP_USER_AGENT'], ' Chrome/') !== false);
-  $html = new \simple_html_dom();
-  $html->load($content);
-  // find container
-  $container = $html->find('.wp-block-media-text__media');
-  foreach ($container as $key => $value) {
-    // get styles
-    $styles = $value->getAttribute('style');
-    if ($styles) {
-      // first explode with ;
-      $arrStyles = explode(';', $styles);
-      $keyValueStyles = [];
-      // second explode with :
-      foreach ($arrStyles as $style) {
-        $s = explode(':', $style, 2);
-        if (count($s) >= 1) {
-          $keyValueStyles[$s[0]] = $s[1];
-        }
-      }
-      $urlImage = null;
-      $newStyles = '';
-      // search img value
-      foreach ($keyValueStyles as $k => $v) {
-        if ($k === 'background-image') {
-          preg_match('/url\("?(.+)"?\)/', $v, $matches);
-          $urlImage = $matches[1];
-          // delete
-          unset($keyValueStyles['background-image']);
-        } else {
-          $newStyles .= $k . ':' . $v . ';';
-        }
-      }
-      // if url
-      if ($urlImage) {
-        // process image
-        // explode path of image
-        $path = explode('/', $urlImage);
-        // remove domain url
-        $relativePath = preg_replace('#^(://|[^/])+#', '', $urlImage);
-        // name of image
-        $nameComplete = $path[count($path) - 1];
-        // the path without name of image
-        $imagePath = str_replace($nameComplete, '', $relativePath);
-        // server path for process image
-        $serverPath = dirname(__FILE__) . '/../../..' . $imagePath;
-        // get image name and extension
-        $split = explode('.', $nameComplete);
-        $name = $split[0];
-        $extension = $split[1];
-        $op = new \Timber\Image\Operation\Resize(768, 768, 'default');
-        // create image name
-        $imageName = $op->filename($name, $extension);
-        // process image
-        $b = $op->run($serverPath . $nameComplete,  $imagePath . $imageName);
-        $imageName = \Timber\ImageHelper::img_to_jpg($imagePath . $imageName);
+// function bgImageLazy($content)
+// {
+//   $hasWebP = (strpos($_SERVER['HTTP_ACCEPT'], 'image/webp') !== false || strpos($_SERVER['HTTP_USER_AGENT'], ' Chrome/') !== false);
+//   $html = new \simple_html_dom();
+//   $html->load($content);
+//   // find container
+//   $container = $html->find('.wp-block-media-text__media');
+//   foreach ($container as $key => $value) {
+//     // get styles
+//     $styles = $value->getAttribute('style');
+//     if ($styles) {
+//       // first explode with ;
+//       $arrStyles = explode(';', $styles);
+//       $keyValueStyles = [];
+//       // second explode with :
+//       foreach ($arrStyles as $style) {
+//         $s = explode(':', $style, 2);
+//         if (count($s) >= 1) {
+//           $keyValueStyles[$s[0]] = $s[1];
+//         }
+//       }
+//       $urlImage = null;
+//       $newStyles = '';
+//       // search img value
+//       foreach ($keyValueStyles as $k => $v) {
+//         if ($k === 'background-image') {
+//           preg_match('/url\("?(.+)"?\)/', $v, $matches);
+//           $urlImage = $matches[1];
+//           // delete
+//           unset($keyValueStyles['background-image']);
+//         } else {
+//           $newStyles .= $k . ':' . $v . ';';
+//         }
+//       }
+//       // if url
+//       if ($urlImage) {
+//         // process image
+//         // explode path of image
+//         $path = explode('/', $urlImage);
+//         // remove domain url
+//         $relativePath = preg_replace('#^(://|[^/])+#', '', $urlImage);
+//         // name of image
+//         $nameComplete = $path[count($path) - 1];
+//         // the path without name of image
+//         $imagePath = str_replace($nameComplete, '', $relativePath);
+//         // server path for process image
+//         $serverPath = dirname(__FILE__) . '/../../..' . $imagePath;
+//         // get image name and extension
+//         $split = explode('.', $nameComplete);
+//         $name = $split[0];
+//         $extension = $split[1];
+//         $op = new \Timber\Image\Operation\Resize(768, 768, 'default');
+//         // create image name
+//         $imageName = $op->filename($name, $extension);
+//         // process image
+//         $b = $op->run($serverPath . $nameComplete,  $imagePath . $imageName);
+//         $imageName = \Timber\ImageHelper::img_to_jpg($imagePath . $imageName);
 
-        if ($hasWebP) {
-          $imageName = \Timber\ImageHelper::img_to_webp($imageName);
-        }
-        // end of process
-        // set style
-        $value->setAttribute('style', $newStyles);
-        // set img for lazy load
-        $value->setAttribute('data-bg', $imageName);
-        $actualClass = $value->getAttribute('class');
-        // add class lazy
-        $value->setAttribute('class', $actualClass . ' lazy');
-      }
-    }
-  }
-  return $html->save();
-}
+//         if ($hasWebP) {
+//           $imageName = \Timber\ImageHelper::img_to_webp($imageName);
+//         }
+//         // end of process
+//         // set style
+//         $value->setAttribute('style', $newStyles);
+//         // set img for lazy load
+//         $value->setAttribute('data-bg', $imageName);
+//         $actualClass = $value->getAttribute('class');
+//         // add class lazy
+//         $value->setAttribute('class', $actualClass . ' lazy');
+//       }
+//     }
+//   }
+//   return $html->save();
+// }
 
-// search
-add_filter('the_content', function ($content) {
-  return bgImageLazy($content);
-});
+// // search
+// add_filter('the_content', function ($content) {
+//   return bgImageLazy($content);
+// });

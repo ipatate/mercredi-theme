@@ -1,5 +1,6 @@
 <?php
-namespace GoodmotionStarter\inc\disableComments;
+
+namespace Goodmotion\inc\disableComments;
 
 add_action('admin_init', function () {
   // Redirect any user trying to access comments page

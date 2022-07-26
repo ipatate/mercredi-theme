@@ -1,6 +1,24 @@
 <?php
 
-namespace GoodmotionStarter\inc\images;
+namespace Goodmotion\inc\image;
+
+// function add_new_image()
+// {
+//   // mobile size
+//   add_image_size('mobile', 480);
+//   // tablet size
+//   add_image_size('tablet', 780);
+// }
+
+
+// add_action('after_setup_theme', __NAMESPACE__ . '\add_new_image');
+
+// set quality to 95
+add_filter('jpeg_quality', function ($arg) {
+  return 95;
+});
+
+
 
 /**
  * resize image and add prefetch to head

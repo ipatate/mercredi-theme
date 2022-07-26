@@ -1,6 +1,6 @@
 <?php
 
-namespace GoodmotionStarter\inc\cookies;
+namespace Goodmotion\inc\cookies;
 
 /** RGPD */
 
