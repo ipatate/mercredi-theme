@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.0/theme.json",
+  "$schema": "https://schemas.wp.org/wp/6.1/theme.json",
   "version": 2,
   "customTemplates": [],
   "settings": {
@@ -33,7 +33,7 @@
         },
         {
           "slug": "accent",
-          "color": "#a61f5e",
+          "color": "#450B40",
           "name": "Accent"
         },
         {
@@ -82,44 +82,44 @@
       "textTransform": true,
       "fontFamilies": [
         {
-          "fontFamily": "\"Gotham\", sans-serif",
-          "name": "Gotham",
-          "slug": "Gotham",
+          "fontFamily": "\"Roboto\", sans-serif",
+          "name": "Roboto",
+          "slug": "Roboto",
           "fontFace": [
             {
-              "fontFamily": "Gotham",
+              "fontFamily": "Roboto",
               "fontWeight": "400",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/Gotham-Book.woff2"]
+              "src": ["file:./assets/fonts/roboto-v27-latin-regular.woff2"]
             },
             {
-              "fontFamily": "Gotham",
+              "fontFamily": "Roboto",
               "fontWeight": "400",
               "fontStyle": "italic",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/Gotham-BookItalic.woff2"]
+              "src": ["file:./assets/fonts/roboto-v27-latin-italic.woff2"]
             },
             {
-              "fontFamily": "Gotham",
+              "fontFamily": "Roboto",
               "fontWeight": "700",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/Gotham-Medium.woff2"]
+              "src": ["file:./assets/fonts/roboto-v27-latin-700.woff2"]
             }
           ]
         },
         {
-          "fontFamily": "\"SohoGothicPro\", sans-serif",
-          "name": "SohoGothicPro",
-          "slug": "SohoGothicPro",
+          "fontFamily": "\"Norican\", sans-serif",
+          "name": "Norican",
+          "slug": "Norican",
           "fontFace": [
             {
-              "fontFamily": "SohoGothicPro",
-              "fontWeight": "700",
-              "fontStyle": "bold",
+              "fontFamily": "Norican",
+              "fontWeight": "400",
+              "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/SohoGothicPro-Bold.woff2"]
+              "src": ["file:./assets/fonts/Norican-Regular.woff2"]
             }
           ]
         }
@@ -154,7 +154,7 @@
   },
   "styles": {
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--gotham)",
+      "fontFamily": "var(--wp--preset--font-family--roboto)",
       "lineHeight": "var(--wp--custom--typography--line-height--normal)",
       "fontSize": "var(--wp--preset--font-size--medium)"
     },
@@ -177,7 +177,7 @@
           "text": "var(--wp--preset--color--background)"
         },
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--roboto)",
           "fontWeight": "600",
           "fontSize": "var(--wp--custom--typography--font-size--btn)",
           "textTransform": "uppercase"
@@ -185,7 +185,7 @@
       },
       "core/post-title": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--roboto)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--custom--typography--font-size--h-1)"
@@ -203,7 +203,7 @@
       },
       "core/site-title": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--roboto)",
           "lineHeight": "var(--wp--custom--typography--line-height--normal)",
           "fontSize": "var(--wp--preset--font-size--medium)",
           "fontStyle": "italic",
@@ -214,7 +214,7 @@
     "elements": {
       "h1": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--norican)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--custom--typography--font-size--h-1)"
@@ -222,7 +222,7 @@
       },
       "h2": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--norican)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--small)",
           "fontSize": "var(--wp--custom--typography--font-size--h-2)"
@@ -230,7 +230,7 @@
       },
       "h3": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--norican)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--custom--typography--font-size--h-3)"
@@ -238,7 +238,7 @@
       },
       "h4": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--norican)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--preset--font-size--x-large)"
@@ -246,7 +246,7 @@
       },
       "h5": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--norican)",
           "fontWeight": "700",
           "textTransform": "uppercase",
           "lineHeight": "var(--wp--custom--typography--line-height--normal)",
@@ -255,7 +255,7 @@
       },
       "h6": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--soho-gothic-pro)",
+          "fontFamily": "var(--wp--preset--font-family--norican)",
           "fontWeight": "700",
           "textTransform": "uppercase",
           "lineHeight": "var(--wp--custom--typography--line-height--normal)",
