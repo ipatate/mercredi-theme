@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote,
+pre,
+figure {
+  @apply max-w-6xl mx-auto;
+}
+
+.wp-block-image {
+  @apply mx-auto;
+}
+
+.wp-block-image.alignfull img {
+  @apply mx-auto;
+}
+
+.wp-block-quote {
+  @apply mx-auto;
+}
+
+.wp-block-pullquote {
+  @apply mx-auto border-none;
+}
+
+.wp-block-pullquote blockquote {
+  @apply px-8 leading-6 border-0;
+}
+.wp-block-pullquote blockquote p {
+  @apply relative pl-2 text-2xl md:text-3xl md:pl-0;
+}
+
+.wp-block-pullquote p::before,
+.wp-block-pullquote p::after {
+  @apply text-gray-300 text-9xl;
+}
+.wp-block-pullquote p::before {
+  @apply absolute -left-9 -top-4;
+}
+.wp-block-pullquote p::after {
+  @apply absolute;
+}
+
+.wp-block-table {
+  @apply mx-auto;
+}

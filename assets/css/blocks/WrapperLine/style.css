@@ -1,0 +1,10 @@
+.wp-block-goodmotion-gm-wrapper-line {
+  @apply flex flex-col w-full md:flex-row;
+}
+
+.wp-block-goodmotion-gm-wrapper-line
+  .wp-block-goodmotion-gm-block-img-txt
+  .gm-img-text-content
+  span {
+  @apply text-4xl font-sherif;
+}

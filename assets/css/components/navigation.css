@@ -1,0 +1,174 @@
+/**
+ * burger btn
+ */
+.gm-nav-button {
+  @apply flex items-center mx-4 ml-auto lg:ml-0 lg:hidden;
+}
+
+.gm-burger {
+  @apply relative z-30 flex items-center w-10 transform bg-transparent cursor-pointer h-9;
+}
+.gm-burger span {
+  @apply absolute left-0 block w-full h-[5px] transition transform bg-white;
+}
+
+.gm-burger span:nth-child(1) {
+  @apply top-0 origin-left;
+}
+
+.gm-burger span:nth-child(2) {
+  @apply top-4;
+}
+
+.gm-burger span:nth-child(3) {
+  @apply bottom-0 origin-left;
+}
+
+/** transform to cross */
+.gm-nav-open .gm-burger span {
+  @apply bg-accent;
+}
+
+.gm-nav-open .gm-burger span:nth-child(1) {
+  @apply w-[3.1rem] rotate-45 -top-0.5 left-0.5;
+}
+
+.gm-nav-open .gm-burger span:nth-child(2) {
+  @apply w-0 opacity-0;
+}
+
+.gm-nav-open .gm-burger span:nth-child(3) {
+  @apply w-[3.1rem] -rotate-45 -bottom-0.5 left-0.5;
+}
+
+/**
+ * Navigation
+ */
+
+.gm-nav-main {
+  @apply fixed top-0 left-0 right-0 flex justify-center lg:items-center bg-white
+  h-[0px] max-h-[0px] overflow-hidden opacity-0 mx-auto w-full
+  lg:items-stretch lg:bg-transparent flex-1 z-30 transition lg:relative lg:h-auto
+  lg:overflow-visible lg:opacity-100 lg:max-h-full;
+}
+
+/** first level */
+.gm-nav-main > ul {
+  @apply flex flex-col items-stretch w-full lg:flex-row lg:justify-start;
+}
+
+.gm-nav-main > ul.nav-has-lot {
+  @apply lg:justify-between;
+}
+
+.gm-nav-main > ul > li {
+  @apply relative flex flex-col items-start mx-5 my-0 border-gray-200 lg:flex-row lg:border-b lg:items-center lg:border-none;
+}
+
+.gm-nav-main > ul > li.current_page_item a {
+  @apply border-0 border-white border-solid lg:border-b-4;
+}
+
+.gm-nav-main > ul > li:first-child.current_page_item a {
+  @apply border-0;
+}
+
+.gm-nav-main > ul > li:first-child a span {
+  @apply lg:absolute top-[-3000px] left-[-4000px];
+}
+
+.gm-nav-main > ul > li:first-child a:before {
+  @apply items-stretch hidden w-4 h-4 px-4 lg:flex;
+  content: "";
+  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA5NyA5MSI+CiAgPGc+CiAgICA8cGF0aCBkPSJNMTAuNzc5LDQ3LjE5MSBMMTAuNzc5LDg3LjQwOSBDMTAuNzc5LDg4LjE0MyAxMS4wNzMsODguODY3IDExLjU5Myw4OS4zODUgQzEyLjExMyw4OS45MDMgMTIuODMzLDkwLjE5OCAxMy41NzEsOTAuMTk4IEwzNi4wNTQsOTAuMTk4IEwzNi4wNTQsNjAuNjY3IEMzNi4wNTQsNTkuOTMgMzYuMzQ2LDU5LjIwNiAzNi44NjgsNTguNjg5IEMzNy4zODYsNTguMTY4IDM4LjEwOCw1Ny44NyAzOC44MzksNTcuODcgTDU4LjA0Miw1Ny44NyBDNTguNzc5LDU3Ljg3IDU5LjQ5Myw1OC4xNjkgNjAuMDE2LDU4LjY4OSBDNjAuNTM3LDU5LjIwNiA2MC44Myw1OS45MjkgNjAuODMsNjAuNjY3IEw2MC44Myw5MC4xOTggTDgzLjMxNyw5MC4xOTggQzg0LjA1OCw5MC4xOTggODQuNzYzLDg5LjkxMyA4NS4yOSw4OS4zODUgQzg1LjgxMSw4OC44NTggODYuMTA0LDg4LjE1NCA4Ni4xMDQsODcuNDA5IEw4Ni4xMDQsNDcuMTM5IEw0OC4wMzUsMTcuNTQgTDEwLjc3OSw0Ny4xOTEgWiIgZmlsbD0iI2ZmZiIgLz4KICAgIDxwYXRoIGQ9Ik05NC41NDksMzQuNzM0IEw1MS44NDUsMS44ODYgQzQ5Ljg0MywwLjM0NCA0Ny4wMzksMC4zNDQgNDUuMDM0LDEuODg2IEwyMi4xNTksMTkuNDgyIEwyMi4xNTksMTAuNTk3IEwxMC45ODksMTAuNTk3IEwxMC45ODksMjguMDcxIEwyLjMzNiwzNC43MzEgQy0wLjEwNiwzNi42MTIgLTAuNTY1LDQwLjExOSAxLjMxNiw0Mi41NiBDMi40MTIsNDMuOTg5IDQuMDcsNDQuNzM5IDUuNzQxLDQ0LjczOSBDNi4zNTMsNDQuNzM5IDYuOTY3LDQ0LjYzNiA3LjU2LDQ0LjQzMyBMNDYuNzIyLDEzLjI3MyBDNDcuNDc2LDEyLjY3MSA0OC41MzYsMTIuNjY1IDQ5LjI5MiwxMy4yNTMgTDg5LjQxMSw0NC40NDQgQzkxLjU5OSw0NS4xNTUgOTQuMDg1LDQ0LjQ5IDk1LjU3LDQyLjU2IEM5Ny40NTIsNDAuMTE5IDk2Ljk5MiwzNi42MTMgOTQuNTQ5LDM0LjczNCBaIiBmaWxsPSIjZmZmIiAvPgogIDwvZz4KPC9zdmc+Cg==) no-repeat 50%;
+}
+
+.gm-nav-main > ul.nav-has-lot > li {
+  @apply mx-0;
+}
+
+/** first link show only on mobile when it has children's */
+.gm-nav-main li.gm-hide-desktop {
+  @apply block lg:hidden;
+}
+
+/** second level */
+.gm-nav-main ul > li > ul {
+  @apply max-h-[80vh] overflow-y-auto overflow-x-hidden;
+  @apply absolute flex-col lg:overflow-visible opacity-0 hidden top-full bg-accent min-w-[8rem] w-max shadow-2xl transform transition;
+}
+
+/** link */
+.gm-nav-main a {
+  @apply block w-full px-4 py-4 text-2xl text-accent lg:pt-3 whitespace-nowrap lg:focus:underline;
+  @apply lg:text-base lg:text-white lg:w-auto;
+}
+
+.gm-nav-main .current-menu-item > a {
+  @apply flex items-center;
+}
+
+.gm-nav-main ul > li > ul > li:hover {
+  @apply lg:bg-[rgba(254,254,254,0.2)];
+}
+
+.gm-nav-main ul a:hover {
+  @apply lg:text-gray-200;
+}
+
+.gm-nav-main ul a:focus {
+  @apply no-underline;
+}
+
+/** first level links */
+.gm-nav-main ul > li.menu-item-has-children > a {
+  @apply flex items-center;
+}
+
+/** arrow down when it has children's */
+.gm-nav-main ul > li.menu-item-has-children > a::after {
+  @apply flex items-center hidden w-4 h-2 ml-3 bg-no-repeat bg-down-nav lg:flex;
+  content: '';
+}
+
+.gm-nav-main ul > li.menu-item-has-children::after {
+  @apply absolute right-0 flex items-center w-10 h-10 mt-3 transition transform bg-no-repeat bg-down-nav-mobile lg:hidden;
+  content: '';
+}
+
+/** show children's on hover */
+.gm-nav-main ul > li.menu-item-has-children:hover > ul,
+.gm-nav-main ul > li.menu-item-has-children.is-collapsed > ul {
+  @apply lg:flex lg:visible lg:opacity-100;
+}
+
+/** nav is open */
+.gm-nav-main-open {
+  @apply flex h-screen max-h-screen pt-24 overflow-visible overflow-y-auto opacity-100;
+}
+
+.gm-nav-main-open ul > li.is-opened > ul {
+  @apply relative top-0 flex w-screen max-w-full max-h-full shadow-inner opacity-100;
+}
+
+/** open second level nav on mobile nav */
+.gm-nav-main-open ul > li.menu-item-has-children.is-opened::after {
+  @apply rotate-90;
+}
+
+.gm-nav-main-open ul > li > ul > li {
+  @apply flex w-full pl-4 m-0 border-t border-gray-200 lg:p-0 bg-gray-50 lg:border-none;
+}
+
+.gm-nav-main-open ul > li > ul > li a {
+  @apply w-full text-left md:text-center;
+}
+
+/** page on top */
+.page-istop .gm-nav-main ul > li > ul {
+  @apply bg-[rgba(123,123,123,0.6)];
+}
+
+.page-istop .gm-nav-main a {
+  @apply text-accent lg:text-white;
+}

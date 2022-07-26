@@ -1,0 +1,150 @@
+.gm-not-hero {
+  @apply min-h-[130px] md:min-h-[170px];
+}
+
+.gm-hero-container {
+  @apply relative w-full max-w-full min-w-full overflow-hidden;
+}
+
+.gm-hero-autoplay {
+  @apply absolute inline-flex ml-4 right-4 md:right-8 focus:outline-none;
+}
+
+.gm-hero-autoplay span {
+  @apply hidden;
+}
+
+.gm-hero-autoplay::after {
+  @apply flex items-center justify-center bg-center bg-no-repeat bg-contain w-14 h-14 bg-play;
+  content: '';
+}
+
+.gm-hero-autoplay.play::after {
+  @apply bg-no-repeat bg-pause;
+}
+
+.gm-hero {
+  @apply relative w-full max-w-full min-w-full;
+}
+
+.gm-hero > div {
+  @apply flex items-start max-h-screen;
+}
+
+.gm-hero-wrapper-page {
+  @apply mb-12 lg:mb-12;
+}
+
+.gm-hero-wrapper-page .gm-hero > div {
+  @apply max-h-[50vh] md:max-h-[40vh];
+}
+
+.gm-hero-wrapper-page .gm-hero > div > div {
+  @apply max-h-[50vh] md:max-h-[40vh];
+}
+
+.gm-hero-wrapper-page .gm-hero > div > div > div picture {
+  @apply relative;
+}
+
+.gm-hero > div > div {
+  @apply relative max-w-full overflow-hidden;
+}
+
+.gm-hero > div > div > div img,
+.gm-hero > div > div > div picture {
+  @apply object-cover w-full min-w-full min-h-screen;
+}
+
+/** mask over picture */
+.gm-hero > div > div::after {
+  @apply absolute top-0 bottom-0 left-0 right-0 w-full max-w-full opacity-60 bg-gradient-to-b from-gray-800 to-transparent;
+  content: '';
+}
+
+.gm-home-cell {
+  @apply relative flex items-center justify-center overflow-hidden;
+}
+
+.gm-hero-dot-container {
+  @apply absolute z-10 flex items-center justify-center w-full max-w-full px-4 mt-8 bottom-5;
+}
+
+.gm-hero-dot {
+  @apply w-3 h-3 m-1 transition border border-white rounded-full cursor-pointer md:w-4 md:h-4 whitespace-nowrap focus:outline-none;
+}
+
+.gm-hero-dot span {
+  @apply absolute top-[-1000px];
+}
+
+.gm-hero-dot-current {
+  @apply w-4 h-4 bg-white md:w-5 md:h-5;
+}
+
+.gm-hero-arrow-container {
+  @apply hidden md:flex justify-between w-full px-8 absolute top-[50%] z-10 transform;
+}
+
+.gm-hero-arrow-container button {
+  @apply relative z-10 flex items-center justify-center w-12 h-12 font-medium text-center bg-white rounded-full opacity-70 focus:outline-none;
+}
+
+.gm-hero-arrow-container button:hover {
+  @apply shadow-lg opacity-100;
+}
+
+.gm-hero-arrow-container button span {
+  @apply absolute top-[-3000px];
+}
+
+.gm-hero-arrow-previous::after {
+  @apply relative flex items-center justify-center w-5 h-6 bg-no-repeat bg-contain bg-previous;
+  content: '';
+}
+
+.gm-hero-arrow-next::after {
+  @apply relative flex items-center justify-center w-5 h-6 bg-no-repeat bg-contain left-1 bg-next;
+  content: '';
+}
+
+.gm-hero-arrow-container button.gm-arrow-disabled {
+  @apply opacity-20;
+}
+
+.gm-hero-arrow-container button.gm-arrow-disabled:hover {
+  @apply shadow-none opacity-20;
+}
+
+.gm-hero-arrow-container button.gm-arrow-disabled::after {
+  @apply opacity-20;
+}
+
+/** content */
+.hero_content {
+  @apply absolute top-0 bottom-0 left-0 right-0 z-30 flex flex-col items-center justify-center w-full max-w-[90%] md:max-w-[80%] lg:max-w-[80%]  ml-[5%] md:ml-[10%] lg:ml-[10%];
+  /*
+  absolute top-[45%] max-w-[90%] left-[50%] md:items-start transform -translate-x-1/2; w-3/4 */
+  /* animation: all linear .3s; */
+}
+
+.gm-hero-alone .hero_content {
+  @apply md:items-start;
+}
+
+.hero_content h2 {
+  @apply mx-0 mb-3 text-4xl font-bold text-white md:text-7xl;
+}
+
+.hero_content p {
+  @apply max-w-full mx-3 text-xl text-white break-words;
+}
+
+/** button */
+.hero_content > div {
+  @apply my-4;
+}
+
+.gm-hero-wrapper-page .gm-hero .hero_content {
+  @apply top-[40%] md:top-[50%]
+}

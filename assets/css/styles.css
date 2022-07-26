@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './settings/components.css';
+@import './settings/fonts.css';
+@import 'tailwindcss/utilities';
+@import './settings/variables.css';
+
+@import 'flickity/dist/flickity.min.css';
+
+/** GLOBAL */
+@import './shared.css';
+@import './animation.css';
+@import './has.css';
+
+/** COMPONENTS */
+@import 'components/components.css';
+
+/** BLOCK **/
+@import 'block-wp.css';
+@import 'blocks/blocks.css';
+
+/** GDPR Cookies */
+@import 'cookies.css';

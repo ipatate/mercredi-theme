@@ -1,0 +1,7 @@
+.wp-block-media-text .wp-block-media-text__content {
+  @apply px-3 py-0;
+}
+
+.wp-block-columns.gm-center {
+  @apply max-w-6xl px-6 mx-auto;
+}

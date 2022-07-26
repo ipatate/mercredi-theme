@@ -1,0 +1,20 @@
+.wp-block-goodmotion-gm-block-img-txt {
+  @apply bg-no-repeat flex flex-1 bg-cover bg-center h-96 relative md:min-h-[400px] min-h-[340px] mb-1 md:mb-0;
+}
+
+.wp-block-goodmotion-gm-block-img-txt .gm-img-text-content {
+  @apply absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center no-underline;
+}
+
+.wp-block-goodmotion-gm-block-img-txt .gm-img-text-content::after {
+  @apply absolute top-0 bottom-0 left-0 right-0 transition bg-gray-800 opacity-30;
+  content: '';
+}
+
+.wp-block-goodmotion-gm-block-img-txt .gm-img-text-content:hover::after {
+  @apply opacity-20;
+}
+
+.wp-block-goodmotion-gm-block-img-txt .gm-img-text-content span {
+  @apply relative z-10 text-2xl font-bold text-white;
+}

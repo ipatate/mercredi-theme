@@ -1,0 +1,79 @@
+.gm-footer {
+  @apply bg-accent;
+}
+
+.gm-footer .gm-wrapper {
+  @apply flex flex-col items-stretch text-white min-h-[300px] px-2 lg:px-12 py-5 md:py-2 w-full mx-auto;
+}
+
+.gm-footer .gm-wrapper > div {
+  @apply flex-1 mb-2;
+}
+
+/** bloc logo */
+.gm-footer .gm-wrapper .gm-logo {
+  @apply flex flex-row justify-center mb-4;
+}
+
+.gm-footer .gm-wrapper .gm-logo p {
+  @apply mx-0 my-0 text-sm text-white;
+}
+
+.gm-footer .gm-wrapper .gm-logo a {
+  @apply relative flex z-10 h-14 w-[180px] md:w-[180px] md:h-14 ml-2 my-0 bg-contain bg-logo-white bg-no-repeat;
+}
+
+.gm-footer .gm-wrapper .gm-logo a span {
+  @apply absolute top-[-10000px] left-[-10000px];
+}
+
+/** bloc content central */
+
+.gm-footer .gm-wrapper .gm-footer-content {
+  @apply flex flex-col mx-4 my-3 md:flex-row;
+}
+
+/** bloc nav */
+.gm-footer .gm-wrapper .gm-footer-nav {
+  @apply flex flex-col items-center justify-center flex-1 py-4 m-0 text-center md:text-left;
+}
+
+.gm-footer .gm-wrapper .gm-footer-nav a {
+  @apply underline;
+}
+
+/** bloc address */
+.gm-footer-address {
+  @apply mt-4 text-center;
+}
+
+/** bloc social */
+.gm-footer-social {
+  @apply flex flex-col items-center justify-center flex-1 py-3 md:py-0;
+}
+.gm-footer-social > div:first-child {
+  @apply text-2xl font-bold capitalize;
+}
+
+.gm-footer-social > div:last-child {
+  @apply flex;
+}
+
+.gm-footer-social a {
+  @apply flex w-8 h-8 m-2;
+}
+
+/** bottom */
+.gm-footer-reserved {
+  @apply flex flex-col-reverse justify-end pt-4 border-t border-white md:flex-row;
+}
+
+.gm-footer-reserved p:first-child {
+  @apply text-center md:text-left;
+}
+.gm-footer-reserved p:last-child {
+  @apply mb-3 text-center md:mb-0 md:text-right;
+}
+.gm-footer-reserved p {
+  @apply flex-1 m-0;
+}
