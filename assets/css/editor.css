@@ -1,5 +1,5 @@
 @import 'tailwindcss/base';
-@import "./settings/components.css";
+@import './settings/components.css';
 @import 'tailwindcss/components';
 @import './settings/fonts.css';
 @import 'tailwindcss/utilities';
@@ -12,7 +12,7 @@
 
 /** prose to editor */
 body {
-  @apply w-full p-0 mx-auto prose lg:prose-lg;
+  @apply w-full p-0 mx-auto;
 }
 
 /** full width editor block */

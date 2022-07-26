@@ -34,7 +34,7 @@
 }
 
 .gm-events-list-element .gm-events-content > p {
-  @apply prose text-gray-500 max-w-none;
+  @apply text-gray-500 max-w-none;
 }
 
 .gm-events-list-element .gm-events-content .gm-events-link {

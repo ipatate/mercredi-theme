@@ -1,5 +1,5 @@
 .gm-header {
-  @apply fixed left-0 right-0 z-50 flex max-w-full px-2 py-6 transition duration-500 transform translate-y-0 shadow-lg bg-accent xl:px-8 xl:py-6 lg:-translate-y-full;
+  @apply fixed left-0 right-0 z-50 flex max-w-full px-2 py-6 transition duration-500 transform translate-y-0 shadow-lg bg-[rgba(123,123,123,0.2)] xl:px-8 xl:py-6 lg:-translate-y-full;
 }
 
 .gm-header .wrapper {
@@ -24,7 +24,7 @@
 } */
 
 .page-istop .gm-header {
-  @apply bg-accent lg:bg-[rgba(123,123,123,0.2)];
+  @apply bg-accent lg:bg-accent;
 }
 
 .no-hero.page-istop .gm-header {

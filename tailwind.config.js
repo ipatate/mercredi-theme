@@ -23,7 +23,8 @@ module.exports = {
         next: "url('/assets/media/next.svg')",
       }),
       colors: {
-        accent: '#450B40',
+        // accent: '#450B40',
+        accent: '#b0Bc67',
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -37,5 +38,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms')],
 }
