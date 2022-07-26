@@ -2,7 +2,8 @@ const { resolve, sep } = require('path')
 const url = require('postcss-url')
 const plug = [
   require('postcss-import'),
-  require('postcss-nested'),
+  // require('postcss-nested'),
+  require('tailwindcss/nesting'),
   require('tailwindcss'),
   require('autoprefixer'),
 ]
