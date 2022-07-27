@@ -30,9 +30,10 @@ require_once dirname(__FILE__) . '/inc/acf.php';
 require_once dirname(__FILE__) . '/inc/acf_config.php';
 require_once dirname(__FILE__) . '/inc/images.php';
 require_once dirname(__FILE__) . '/inc/post.php';
+require_once(dirname(__FILE__) . '/inc/woocommerce.php');
+require_once(dirname(__FILE__) . '/inc/shortcode.php');
 require_once(dirname(__FILE__) . '/inc/cookies.php');
 
-require_once(dirname(__FILE__) . '/inc/shortcode.php');
 require_once(dirname(__FILE__) . '/post-types/event.php');
 require_once(dirname(__FILE__) . '/post-types/product.php');
 require_once(dirname(__FILE__) . '/post-types/menu.php');

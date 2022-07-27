@@ -25,6 +25,10 @@ h6 {
   word-wrap: normal !important;
 }
 
+.container {
+  @apply max-w-full md:max-w-full lg:max-w-full xl:max-w-full;
+}
+
 /** title hidden */
 .article-content > h1.article-h1.gm-title-h {
   /* position: absolute;

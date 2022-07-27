@@ -21,5 +21,8 @@
 @import 'block-wp.css';
 @import 'blocks/blocks.css';
 
+/** store **/
+@import 'woo/styles.css';
+
 /** GDPR Cookies */
 @import 'cookies.css';

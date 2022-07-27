@@ -1701,16 +1701,19 @@ h2.gm-instagram-feed-title span {
 }
 .gm-instagram-feed div.gm-instagram-video .gm-instagram-video-content {
   position: relative;
+  aspect-ratio: 1 / 1;
   height: 100%;
   min-height: 100%;
   width: 100%;
   min-width: 100%;
+  overflow: hidden;
 }
 .gm-instagram-feed div.gm-instagram-video .gm-instagram-video-content video {
   margin: 0px;
-  height: 100%;
-  min-height: 100%;
+  width: 100%;
   min-width: 100%;
+  max-width: none;
+  object-fit: cover;
 }
 .gm-instagram-feed div.gm-instagram-feed-element button {
   position: absolute;

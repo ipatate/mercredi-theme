@@ -1,0 +1,192 @@
+/** global */
+.woocommerce .site-main,
+div.woocommerce {
+  @apply px-8 mb-20;
+}
+
+.woocommerce .site-main h2,
+div.woocommerce h2,
+.woocommerce .site-main h3,
+div.woocommerce h3,
+.woocommerce .site-main h4,
+div.woocommerce h4,
+.woocommerce .site-main h5,
+div.woocommerce h5 {
+  @apply mx-0 text-accent font-display;
+}
+
+/** header */
+
+.gm-head-woocommerce {
+  @apply flex justify-end mb-5;
+}
+
+.gm-head-woocommerce a {
+  @apply flex items-center ml-2 hover:text-accent;
+}
+
+.gm-head-woocommerce a.gm-cart span {
+  @apply flex items-center justify-center w-5 h-5 p-2 ml-1 text-xs leading-4 text-white rounded-full bg-accent;
+}
+
+.woocommerce-products-header {
+  @apply my-7;
+}
+
+.woocommerce-products-header .woocommerce-products-header__title.page-title {
+  @apply mx-0 text-5xl text-accent font-display;
+}
+
+/** breadcrumb */
+.woocommerce .woocommerce-breadcrumb {
+  @apply mb-10;
+}
+
+.woocommerce .woocommerce-breadcrumb a {
+  @apply text-accent;
+}
+
+/** button */
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  @apply px-4 py-3 text-white bg-accent hover:bg-accent/80 hover:text-white;
+}
+
+/** input */
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text,
+.woocommerce .quantity .qty {
+  @apply px-4 py-2.5 leading-3;
+}
+
+/** product */
+.woocommerce div.product .product_title {
+  @apply text-5xl font-display text-accent;
+}
+
+.woocommerce div.product .price {
+  @apply my-7;
+}
+
+.woocommerce div.product .price span {
+  @apply text-3xl text-gray-600;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+  @apply p-0 m-0 bg-transparent border-0 before:border-0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+  @apply pl-0 ml-0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+  @apply bg-transparent border-0 before:border-0;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+  @apply text-xl;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel > h2 {
+  @apply hidden;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel p {
+  @apply max-w-none;
+}
+
+/** list product */
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h2,
+.woocommerce ul.products li.product h3 {
+  @apply text-xl text-accent font-display;
+}
+
+.woocommerce ul.products li.product .price,
+.woocommerce div.product .price span {
+  @apply text-xl text-gray-600;
+}
+/** list product block */
+
+.wc-block-grid__products {
+  @apply px-8;
+}
+
+.wc-block-grid__products .wc-block-components-product-title {
+  @apply text-lg text-accent;
+}
+
+.wc-block-grid__products .wc-block-components-product-image a {
+  @apply flex items-center justify-center overflow-hidden;
+}
+
+.wc-block-grid__products .wc-block-components-product-image a img {
+  @apply object-cover min-w-full;
+}
+
+/** related product */
+.related.products {
+  @apply px-8 mt-20;
+}
+
+.related.products > ul {
+  @apply my-10;
+}
+
+.related.products > h2 {
+  @apply text-3xl font-display text-accent;
+}
+
+/** notice */
+p.woocommerce-notice {
+  @apply px-0 my-12 text-xl max-w-none;
+}
+
+/** account */
+.woocommerce-account div.woocommerce {
+  @apply grid grid-cols-1 md:grid-cols-4;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+  @apply float-none w-auto col-span-1 col-start-1 mb-8 md:mb-0;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+  @apply float-none w-auto md:col-span-3 md:col-start-2;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+  @apply my-1.5 list-disc;
+}
+
+/** address accound */
+.woocommerce-Addresses .woocommerce-Address.col-1,
+.woocommerce-Addresses .woocommerce-Address.col-2 {
+  @apply float-none w-auto;
+}
+
+.woocommerce-Addresses .woocommerce-Address .woocommerce-Address-title {
+  @apply my-6;
+}
+
+.woocommerce-Addresses .woocommerce-Address .woocommerce-Address-title h3 {
+  @apply float-none mx-0 text-xl text-accent font-display;
+}
+
+.woocommerce-account .addresses .title .edit {
+  @apply inline-flex float-none px-4 py-2 leading-5 text-white rounded-md bg-accent hover:bg-accent/80 hover:text-white;
+}
+
+/** payment */
+.woocommerce li input[type='checkbox'] {
+  @apply min-w-[16px] h-4 mr-0;
+}

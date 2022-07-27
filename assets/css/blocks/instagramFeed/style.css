@@ -46,11 +46,11 @@ h2.gm-instagram-feed-title span {
 }
 
 .gm-instagram-feed div.gm-instagram-video .gm-instagram-video-content {
-  @apply relative w-full h-full min-w-full min-h-full;
+  @apply relative w-full h-full min-w-full min-h-full overflow-hidden aspect-square;
 }
 
 .gm-instagram-feed div.gm-instagram-video .gm-instagram-video-content video {
-  @apply h-full min-w-full min-h-full m-0;
+  @apply object-cover w-full min-w-full m-0 max-w-none;
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element button {
