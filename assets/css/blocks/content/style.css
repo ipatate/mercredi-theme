@@ -10,7 +10,7 @@ ol,
 blockquote,
 pre,
 figure {
-  @apply max-w-6xl mx-auto;
+  @apply mx-auto;
 }
 
 .wp-block-image {

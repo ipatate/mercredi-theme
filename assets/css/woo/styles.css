@@ -71,6 +71,22 @@ div.woocommerce h5 {
   @apply text-5xl font-display text-accent;
 }
 
+..woocommerce div.product div.images .flex-control-thumbs {
+  @apply flex flex-wrap;
+}
+
+.woocommerce
+  div.product
+  .woocommerce-product-gallery--columns-4
+  .flex-control-thumbs
+  li:nth-child(4n + 1) {
+  @apply clear-none;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+  @apply w-1/6 p-1;
+}
+
 .woocommerce div.product .price {
   @apply my-7;
 }

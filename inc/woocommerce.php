@@ -40,8 +40,8 @@ add_filter('woocommerce_add_to_cart_fragments', __NAMESPACE__ .  '\add_to_cart_f
 
 function theme_setup()
 {
-  add_theme_support('wc-product-gallery-zoom');
-  add_theme_support('wc-product-gallery-lightbox');
+  // add_theme_support('wc-product-gallery-zoom');
+  // add_theme_support('wc-product-gallery-lightbox');
   add_theme_support('wc-product-gallery-slider');
 }
 
