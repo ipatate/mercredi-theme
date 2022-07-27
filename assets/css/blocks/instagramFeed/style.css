@@ -20,27 +20,28 @@ h2.gm-instagram-feed-title span {
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element {
-  @apply relative flex items-start justify-center w-1/3 h-auto overflow-hidden md:flex-1 md:w-auto;
+  @apply relative flex items-start justify-center w-1/3 h-auto overflow-hidden md:flex-1 md:w-auto after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:transition after:bg-gray-800 after:opacity-20 hover:after:opacity-10;
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-video a {
-  @apply absolute z-30 flex items-center justify-center w-10 h-10 text-white rounded-full bg-accent top-2 right-2;
+  @apply absolute z-30 flex items-center justify-center w-10 h-10 text-white rounded-full bg-accent top-2 right-2 after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:z-30 after:opacity-0;
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a span {
   @apply hidden;
 }
 
-.gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a::after {
+/* .gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a::after {
   @apply absolute top-0 bottom-0 left-0 right-0 z-30 opacity-0;
   content: '';
-}
+} */
 
 .gm-instagram-feed div.gm-instagram-feed-element a svg {
   @apply w-5 fill-current relative top-[2px];
 }
 
-.gm-instagram-feed div.gm-instagram-feed-element picture, .gm-instagram-feed div.gm-instagram-feed-element img {
+.gm-instagram-feed div.gm-instagram-feed-element picture,
+.gm-instagram-feed div.gm-instagram-feed-element img {
   @apply w-full h-full min-w-full min-h-full m-0;
 }
 
@@ -100,14 +101,14 @@ h2.gm-instagram-feed-title span {
   @apply flex items-start justify-center;
 }
 
-.gm-instagram-feed div.gm-instagram-feed-element::after {
+/* .gm-instagram-feed div.gm-instagram-feed-element::after {
   @apply absolute top-0 bottom-0 left-0 right-0 transition bg-gray-800 opacity-20;
   content: '';
-}
+} */
 
-.gm-instagram-feed div.gm-instagram-feed-element:hover::after {
+/* .gm-instagram-feed div.gm-instagram-feed-element:hover::after {
   @apply opacity-10;
-}
+} */
 
 .gm-instagram-feed .flickity-button {
   @apply hidden md:block;
@@ -118,14 +119,14 @@ h2.gm-instagram-feed-title span {
 }
 
 .gm-instagram-link a {
-  @apply z-10 flex items-center px-4 py-1 -mt-5 no-underline bg-white border-2 rounded text-accent border-accent;
+  @apply z-10 flex items-center px-4 py-1 -mt-5 no-underline bg-white border-2 rounded text-accent border-accent before:block before:w-5 before:h-5 before:my-0 before:mr-2 before:bg-center before:bg-no-repeat before:bg-cover before:bg-instagram-accent;
 }
 
 .gm-instagram-link a:hover {
   @apply bg-gray-200;
 }
 
-.gm-instagram-link a::before {
+/* .gm-instagram-link a::before {
   @apply block w-5 h-5 my-0 mr-2 bg-center bg-no-repeat bg-cover bg-instagram-accent;
   content: '';
-}
+} */

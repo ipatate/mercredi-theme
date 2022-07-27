@@ -24,7 +24,7 @@ module.exports = {
       }),
       colors: {
         // accent: '#450B40',
-        accent: '#b0Bc67',
+        accent: '#b08067',
       },
       typography: (theme) => ({
         DEFAULT: {

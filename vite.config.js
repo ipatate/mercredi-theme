@@ -31,6 +31,7 @@ export default defineConfig({
     emptyOutDir: true,
     manifest: true,
     target: 'es6',
+    minify: 'terser',
     rollupOptions: {
       input: resolve(__dirname, 'main.js'),
     },

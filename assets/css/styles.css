@@ -1,9 +1,11 @@
+@import './settings/variables.css';
+
 @import 'tailwindcss/base';
+
 @import 'tailwindcss/components';
 @import './settings/components.css';
-/* @import './settings/fonts.css'; */
+
 @import 'tailwindcss/utilities';
-@import './settings/variables.css';
 
 @import 'flickity/dist/flickity.min.css';
 

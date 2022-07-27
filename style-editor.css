@@ -1070,7 +1070,7 @@ select {
 .article-content .has-text-color.has-accent-color, 
 .has-text-color.has-accent-color {
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
 }
 .has-white-color {
   --tw-text-opacity: 1;
@@ -1082,11 +1082,11 @@ select {
 }
 .has-accent-color {
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
 }
 .has-accent-background-color {
   --tw-bg-opacity: 1;
-  background-color: rgb(176 188 103 / var(--tw-bg-opacity));
+  background-color: rgb(176 128 103 / var(--tw-bg-opacity));
 }
 .has-gray-background-color {
   --tw-bg-opacity: 1;
@@ -1098,7 +1098,7 @@ select {
 }
 .has-accent-border {
   --tw-border-opacity: 1;
-  border-color: rgb(176 188 103 / var(--tw-border-opacity));
+  border-color: rgb(176 128 103 / var(--tw-border-opacity));
 }
 .has-white-border {
   --tw-border-opacity: 1;
@@ -1124,7 +1124,7 @@ select {
 .has-accent-color h5, 
 .has-accent-color h6 {
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
 }
 .has-gray-color h1, 
 .has-gray-color h2, 
@@ -1496,7 +1496,7 @@ figure {
 }
 .wp-block-goodmotion-gm-block-full-img-txt .gm-full-content .gm-full-content-inner h2 {
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
 }
 .wp-block-goodmotion-gm-block-full-img-txt .gm-full-content .gm-full-content-inner p {
   --tw-text-opacity: 1;
@@ -1559,7 +1559,7 @@ figure {
   line-height: 2.25rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
 }
 .wp-block-goodmotion-gm-block-full-img-txt
   .gm-full-content
@@ -1587,7 +1587,7 @@ h2.gm-instagram-feed-title {
   font-size: 1.875rem;
   line-height: 2.25rem;
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
 }
 @media (min-width: 768px) {
 
@@ -1625,6 +1625,26 @@ h2.gm-instagram-feed-title span {
   justify-content: center;
   overflow: hidden;
 }
+.gm-instagram-feed div.gm-instagram-feed-element::after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  opacity: 0.2;
+  content: var(--tw-content);
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.gm-instagram-feed div.gm-instagram-feed-element:hover::after {
+  content: var(--tw-content);
+  opacity: 0.1;
+}
 @media (min-width: 768px) {
 
   .gm-instagram-feed div.gm-instagram-feed-element {
@@ -1644,30 +1664,35 @@ h2.gm-instagram-feed-title span {
   justify-content: center;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
-  background-color: rgb(176 188 103 / var(--tw-bg-opacity));
+  background-color: rgb(176 128 103 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a span {
-  display: none;
-}
-.gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a::after {
+.gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-video a::after {
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
   z-index: 30;
+  content: var(--tw-content);
   opacity: 0;
-  content: '';
 }
+.gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a span {
+  display: none;
+}
+/* .gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a::after {
+  @apply absolute top-0 bottom-0 left-0 right-0 z-30 opacity-0;
+  content: '';
+} */
 .gm-instagram-feed div.gm-instagram-feed-element a svg {
   position: relative;
   top: 2px;
   width: 1.25rem;
   fill: currentColor;
 }
-.gm-instagram-feed div.gm-instagram-feed-element picture,  .gm-instagram-feed div.gm-instagram-feed-element img {
+.gm-instagram-feed div.gm-instagram-feed-element picture, 
+.gm-instagram-feed div.gm-instagram-feed-element img {
   margin: 0px;
   height: 100%;
   min-height: 100%;
@@ -1700,7 +1725,7 @@ h2.gm-instagram-feed-title span {
   justify-content: flex-start;
   fill: currentColor;
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
 }
 .gm-instagram-feed div.gm-instagram-feed-element button svg {
   margin-top: 0.5rem;
@@ -1744,7 +1769,7 @@ h2.gm-instagram-feed-title span {
   align-items: stretch;
   justify-content: center;
   --tw-bg-opacity: 1;
-  background-color: rgb(176 188 103 / var(--tw-bg-opacity));
+  background-color: rgb(176 128 103 / var(--tw-bg-opacity));
   font-size: 0.75rem;
   line-height: 1rem;
   --tw-text-opacity: 1;
@@ -1759,25 +1784,13 @@ h2.gm-instagram-feed-title span {
   align-items: flex-start;
   justify-content: center;
 }
-.gm-instagram-feed div.gm-instagram-feed-element::after {
-  position: absolute;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-  opacity: 0.2;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+/* .gm-instagram-feed div.gm-instagram-feed-element::after {
+  @apply absolute top-0 bottom-0 left-0 right-0 transition bg-gray-800 opacity-20;
   content: '';
-}
-.gm-instagram-feed div.gm-instagram-feed-element:hover::after {
-  opacity: 0.1;
-}
+} */
+/* .gm-instagram-feed div.gm-instagram-feed-element:hover::after {
+  @apply opacity-10;
+} */
 .gm-instagram-feed .flickity-button {
   display: none;
 }
@@ -1801,7 +1814,7 @@ h2.gm-instagram-feed-title span {
   border-radius: 0.25rem;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(176 188 103 / var(--tw-border-opacity));
+  border-color: rgb(176 128 103 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding-left: 1rem;
@@ -1809,13 +1822,9 @@ h2.gm-instagram-feed-title span {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   --tw-text-opacity: 1;
-  color: rgb(176 188 103 / var(--tw-text-opacity));
+  color: rgb(176 128 103 / var(--tw-text-opacity));
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
-}
-.gm-instagram-link a:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 .gm-instagram-link a::before {
   margin-top: 0px;
@@ -1827,9 +1836,17 @@ h2.gm-instagram-feed-title span {
   background-image: url('/wp-content/themes/mercredi/assets/media/instagram-accent.svg');
   background-size: cover;
   background-position: center;
+  content: var(--tw-content);
   background-repeat: no-repeat;
-  content: '';
 }
+.gm-instagram-link a:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+/* .gm-instagram-link a::before {
+  @apply block w-5 h-5 my-0 mr-2 bg-center bg-no-repeat bg-cover bg-instagram-accent;
+  content: '';
+} */
 .wp-block-goodmotion-instagram {
   display: flex;
   overflow-x: auto;
@@ -2339,7 +2356,7 @@ h2.gm-products-title {
   border-radius: 9999px;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(176 188 103 / var(--tw-border-opacity));
+  border-color: rgb(176 128 103 / var(--tw-border-opacity));
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -2366,7 +2383,7 @@ h2.gm-products-title {
   height: 1rem;
   width: 1rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(176 188 103 / var(--tw-bg-opacity));
+  background-color: rgb(176 128 103 / var(--tw-bg-opacity));
 }
 @media (min-width: 768px) {
 
@@ -2432,7 +2449,7 @@ h2.gm-products-title {
   margin-top: 1.25rem;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(176 188 103 / var(--tw-bg-opacity));
+  background-color: rgb(176 128 103 / var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
@@ -2555,7 +2572,7 @@ h2.gm-products-title {
   margin-top: 1.25rem;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(176 188 103 / var(--tw-bg-opacity));
+  background-color: rgb(176 128 103 / var(--tw-bg-opacity));
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.5rem;
