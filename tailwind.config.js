@@ -21,6 +21,8 @@ module.exports = {
         pause: "url('/assets/media/pause.svg')",
         previous: "url('/assets/media/previous.svg')",
         next: "url('/assets/media/next.svg')",
+        cart:
+          'url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgcm9sZT0iaW1nIiBjbGFzcz0iaWNvbmlmeSBpY29uaWZ5LS1pb24iIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzc0NzI4MCIgZD0iTTQ1NC42NSAxNjkuNEEzMS44MiAzMS44MiAwIDAgMCA0MzIgMTYwaC02NHYtMTZhMTEyIDExMiAwIDAgMC0yMjQgMHYxNkg4MGEzMiAzMiAwIDAgMC0zMiAzMnYyMTZjMCAzOSAzMyA3MiA3MiA3MmgyNzJhNzIuMjIgNzIuMjIgMCAwIDAgNTAuNDgtMjAuNTVhNjkuNDggNjkuNDggMCAwIDAgMjEuNTItNTAuMlYxOTJhMzEuNzUgMzEuNzUgMCAwIDAtOS4zNS0yMi42Wk0xNzYgMTQ0YTgwIDgwIDAgMCAxIDE2MCAwdjE2SDE3NlptMTkyIDk2YTExMiAxMTIgMCAwIDEtMjI0IDB2LTE2YTE2IDE2IDAgMCAxIDMyIDB2MTZhODAgODAgMCAwIDAgMTYwIDB2LTE2YTE2IDE2IDAgMCAxIDMyIDBaIj48L3BhdGg+PC9zdmc+)',
       }),
       colors: {
         // accent: '#450B40',

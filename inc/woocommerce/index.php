@@ -2,6 +2,7 @@
 
 namespace Goodmotion\inc\woocommerce;
 
+require_once(dirname(__FILE__) . '/download.php');
 
 function theme_add_woocommerce_support()
 {
@@ -11,6 +12,17 @@ function theme_add_woocommerce_support()
 add_action('after_setup_theme', __NAMESPACE__ . '\theme_add_woocommerce_support');
 
 
+function logout()
+{
+  $items = '';
+  if (is_user_logged_in()) {
+    $items .= '<a href="' . wp_logout_url(get_permalink(wc_get_page_id('myaccount'))) . '">Log Out</a>';
+  }
+  return $items;
+}
+
+
+/** fragment for cart head */
 function getCartFragment()
 {
   $total = WC()->cart->get_cart_contents_count();
@@ -20,12 +32,16 @@ function getCartFragment()
 /** head store */
 function before_content_wrapper()
 {
-  echo '<div class="gm-head-woocommerce"><a href=" ' . get_permalink(get_option('woocommerce_myaccount_page_id')) . '" title=" ' . __('My Account', '') . '">' . __('My Account', '') . '</a>
-  ' . namespace\getCartFragment() . '
+  echo '<div class="gm-head-woocommerce">' . (is_user_logged_in() ?
+    '<a href=" ' . get_permalink(get_option('woocommerce_myaccount_page_id')) . '" title=" ' . __('Account', '') . '">' . __('Account', '') . '</a>' : '') .
+    ' ' . namespace\getCartFragment() . ' ' . namespace\logout() . '
   </div>';
 }
 
 add_action('woocommerce_before_main_content', __NAMESPACE__ .  '\before_content_wrapper');
+
+add_action('woocommerce_before_account_navigation', __NAMESPACE__ .  '\before_content_wrapper');
+
 
 /** fragment ajax for update cart head */
 function add_to_cart_fragment($fragments)

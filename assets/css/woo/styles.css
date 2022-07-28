@@ -4,6 +4,10 @@ div.woocommerce {
   @apply px-8 mb-20;
 }
 
+div.woocommerce {
+  @apply before:hidden;
+}
+
 .woocommerce .site-main h2,
 div.woocommerce h2,
 .woocommerce .site-main h3,
@@ -18,15 +22,18 @@ div.woocommerce h5 {
 /** header */
 
 .gm-head-woocommerce {
-  @apply flex justify-end mb-5;
+  @apply flex justify-end w-full col-start-1 col-end-5 mb-8;
 }
 
 .gm-head-woocommerce a {
-  @apply flex items-center ml-2 hover:text-accent;
+  @apply flex items-center ml-2 text-gray-500 hover:text-accent;
 }
 
 .gm-head-woocommerce a.gm-cart span {
   @apply flex items-center justify-center w-5 h-5 p-2 ml-1 text-xs leading-4 text-white rounded-full bg-accent;
+}
+.gm-head-woocommerce a.gm-cart {
+  @apply ml-4 before:bg-cart before:text-gray-500 before:w-4 before:h-4 before:mr-1 before:bg-cover;
 }
 
 .woocommerce-products-header {
@@ -71,8 +78,16 @@ div.woocommerce h5 {
   @apply text-5xl font-display text-accent;
 }
 
-..woocommerce div.product div.images .flex-control-thumbs {
+.woocommerce div.product div.images .flex-control-thumbs {
   @apply flex flex-wrap;
+}
+
+.woocommerce ul.products li.product a img {
+  @apply mb-0;
+}
+
+.woocommerce ul.products li.product .button {
+  @apply mt-0;
 }
 
 .woocommerce
@@ -163,13 +178,29 @@ div.woocommerce h5 {
 }
 
 /** notice */
+.woocommerce-notices-wrapper {
+  @apply col-start-1 col-end-5;
+}
+
 p.woocommerce-notice {
   @apply px-0 my-12 text-xl max-w-none;
 }
 
+.woocommerce-info {
+  @apply before:hidden;
+}
+
 /** account */
+
 .woocommerce-account div.woocommerce {
   @apply grid grid-cols-1 md:grid-cols-4;
+}
+
+.woocommerce-account div.woocommerce #customer_login,
+.woocommerce-account div.woocommerce p,
+.woocommerce-account div.woocommerce .woocommerce-message,
+.woocommerce-account div.woocommerce .woocommerce-ResetPassword {
+  @apply col-start-1 col-end-5;
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation {
@@ -184,7 +215,7 @@ p.woocommerce-notice {
   @apply my-1.5 list-disc;
 }
 
-/** address accound */
+/** address account */
 .woocommerce-Addresses .woocommerce-Address.col-1,
 .woocommerce-Addresses .woocommerce-Address.col-2 {
   @apply float-none w-auto;
@@ -203,6 +234,9 @@ p.woocommerce-notice {
 }
 
 /** payment */
-.woocommerce li input[type='checkbox'] {
-  @apply min-w-[16px] h-4 mr-0;
+.woocommerce input[type='checkbox'],
+.woocommerce form .form-row .input-checkbox,
+.woocommerce-checkout input[type='checkbox'],
+.woocommerce-checkout input[type='radio'] {
+  @apply min-w-[16px] h-4 mr-0 inline-flex;
 }
