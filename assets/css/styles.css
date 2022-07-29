@@ -1,5 +1,7 @@
 @import './settings/variables.css';
 
+@import './reset.css';
+
 @import 'tailwindcss/base';
 
 @import 'tailwindcss/components';

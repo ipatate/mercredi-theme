@@ -1,4 +1,7 @@
 module.exports = {
+  corePlugins: {
+    preflight: false,
+  },
   content: ['./**/*.{php,twig,html}', './assets/*.{js,jsx,ts,tsx,vue}'],
   theme: {
     fontFamily: {
