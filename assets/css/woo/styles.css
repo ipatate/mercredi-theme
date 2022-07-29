@@ -1,3 +1,5 @@
+@import './products.css';
+
 /** global */
 .woocommerce .site-main,
 div.woocommerce {
@@ -32,6 +34,7 @@ div.woocommerce h5 {
 .gm-head-woocommerce a.gm-cart span {
   @apply flex items-center justify-center w-5 h-5 p-2 ml-1 text-xs leading-4 text-white rounded-full bg-accent;
 }
+
 .gm-head-woocommerce a.gm-cart {
   @apply ml-4 before:bg-cart before:text-gray-500 before:w-4 before:h-4 before:mr-1 before:bg-cover;
 }
@@ -62,7 +65,7 @@ div.woocommerce h5 {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-  @apply px-4 py-3 text-white bg-accent hover:bg-accent/80 hover:text-white;
+  @apply px-4 py-3 text-white uppercase bg-accent hover:bg-accent/80 hover:text-white;
 }
 
 /** input */
@@ -71,110 +74,6 @@ div.woocommerce h5 {
 .woocommerce-checkout table.cart td.actions .coupon .input-text,
 .woocommerce .quantity .qty {
   @apply px-4 py-2.5 leading-3;
-}
-
-/** product */
-.woocommerce div.product .product_title {
-  @apply text-5xl font-display text-accent;
-}
-
-.woocommerce div.product div.images .flex-control-thumbs {
-  @apply flex flex-wrap;
-}
-
-.woocommerce ul.products li.product a img {
-  @apply mb-0;
-}
-
-.woocommerce ul.products li.product .button {
-  @apply mt-0;
-}
-
-.woocommerce
-  div.product
-  .woocommerce-product-gallery--columns-4
-  .flex-control-thumbs
-  li:nth-child(4n + 1) {
-  @apply clear-none;
-}
-
-.woocommerce div.product div.images .flex-control-thumbs li {
-  @apply w-1/6 p-1;
-}
-
-.woocommerce div.product .price {
-  @apply my-7;
-}
-
-.woocommerce div.product .price span {
-  @apply text-3xl text-gray-600;
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs {
-  @apply p-0 m-0 bg-transparent border-0 before:border-0;
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li {
-  @apply pl-0 ml-0;
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-  @apply bg-transparent border-0 before:border-0;
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li a {
-  @apply text-xl;
-}
-
-.woocommerce div.product .woocommerce-tabs .panel > h2 {
-  @apply hidden;
-}
-
-.woocommerce div.product .woocommerce-tabs .panel p {
-  @apply max-w-none;
-}
-
-/** list product */
-.woocommerce ul.products li.product .woocommerce-loop-category__title,
-.woocommerce ul.products li.product .woocommerce-loop-product__title,
-.woocommerce ul.products li.product h2,
-.woocommerce ul.products li.product h3 {
-  @apply text-xl text-accent font-display;
-}
-
-.woocommerce ul.products li.product .price,
-.woocommerce div.product .price span {
-  @apply text-xl text-gray-600;
-}
-/** list product block */
-
-.wc-block-grid__products {
-  @apply px-8;
-}
-
-.wc-block-grid__products .wc-block-components-product-title {
-  @apply text-lg text-accent;
-}
-
-.wc-block-grid__products .wc-block-components-product-image a {
-  @apply flex items-center justify-center overflow-hidden;
-}
-
-.wc-block-grid__products .wc-block-components-product-image a img {
-  @apply object-cover min-w-full;
-}
-
-/** related product */
-.related.products {
-  @apply px-8 mt-20;
-}
-
-.related.products > ul {
-  @apply my-10;
-}
-
-.related.products > h2 {
-  @apply text-3xl font-display text-accent;
 }
 
 /** notice */
