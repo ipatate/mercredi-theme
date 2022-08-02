@@ -139,3 +139,8 @@ p.woocommerce-notice {
 .woocommerce-checkout input[type='radio'] {
   @apply min-w-[16px] h-4 mr-0 inline-flex;
 }
+
+/** block gut */
+/* .wp-block-woocommerce-featured-product img {
+  @apply object-cover;
+} */

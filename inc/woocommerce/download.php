@@ -2,6 +2,7 @@
 
 namespace Goodmotion\inc\woocommerce\download;
 
+use DateTime;
 
 add_filter('woocommerce_download_product_filepath', __NAMESPACE__ . '\woocommerce_download_product_filepath_filter', 10, 5);
 
@@ -23,16 +24,34 @@ function woocommerce_download_product_filepath_filter($file_path, $email_address
     // get relative path
     $path = parse_url($file_path, PHP_URL_PATH);
     $path = dirname(__FILE__) . '/../../../../..' . $path;
-
+    $dt = new DateTime($order->get_date_created());
     /** add text on image */
     putenv('GDFONTPATH=' . dirname(__FILE__) . '/../../assets/fonts/');
     $img = imagecreatefromjpeg($path);
     $color = imagecolorallocate($img, 0, 0, 0);
-    $id = 'Mercredi-' . $order->get_id();
-    $font = 'Roboto-Bold';
-    $new_name = 'order' . $id . '.jpeg';
+    // echo '<pre>';
+    // var_dump($download);
+    // echo '<pre>';
+    // die;
+    // get the product for the download
+    $product_id = $download->product_id;
+    $name = null;
+    foreach (($order->get_items()) as $key => $value) {
+      if ($value->get_variation_id() === $product_id || $value->get_product_id() === $product_id) {
+        $name = wc_get_order_item_meta($value->get_id(), 'gm-field-name');
+      }
+    }
 
-    imagettftext($img, 24, 0, 10, 32, $color, $font, $id);
+    $id = 'MERC-' . $dt->format('dmy') . '-' . $order->get_id();
+    $fontName = 'DancingScript-Medium';
+    $font = 'Roboto-Bold';
+    $new_name = $id . '.jpeg';
+
+    // if ($name) {
+    //   imagettftext($img, 21, 0, 400, 405, $color, $fontName, __('For') . ' ' . $name);
+    // }
+
+    imagettftext($img, 12, 0, 400, $name ? 400 : 420, $color, $fontName, $id);
 
     $directory = dirname(__FILE__) . '/../../gift-card/';
     /* create directory */
