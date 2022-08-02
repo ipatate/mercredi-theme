@@ -5,18 +5,18 @@ namespace Goodmotion\inc\editor;
 
 function block_category($categories)
 {
-    array_splice(
-        $categories,
-        2,
-        0,
-        array(
-            array(
-                'slug' => 'mercredi-blocks',
-                'title' => __('Talents Academy Blocks', 'mercredi-theme'),
-            )
-        )
-    );
-    return $categories;
+  array_splice(
+    $categories,
+    2,
+    0,
+    array(
+      array(
+        'slug' => 'goodmotion-blocks',
+        'title' => __('Mercredi Blocks', 'mercredi-theme'),
+      )
+    )
+  );
+  return $categories;
 }
 
 

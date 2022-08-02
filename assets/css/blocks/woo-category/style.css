@@ -1,0 +1,22 @@
+.gm-woo-categories {
+  @apply grid grid-cols-1 gap-3 md:grid-cols-3;
+}
+
+.gm-woo-categories > div {
+  @apply p-0 m-0;
+}
+
+div.gm-woo-category {
+  @apply relative flex items-center justify-center w-full p-0 m-0 overflow-hidden bg-gray-300 h-60;
+}
+
+.gm-woo-category h2 {
+  @apply relative z-10 text-3xl text-center text-white;
+}
+
+.gm-woo-category a {
+  @apply absolute top-0 bottom-0 left-0 right-0;
+}
+.gm-woo-category img {
+  @apply object-cover w-full min-h-full;
+}

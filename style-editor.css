@@ -2240,6 +2240,54 @@ h2.gm-products-title {
       stroke-dashoffset: 0;
     }
   }
+.gm-woo-categories {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+@media (min-width: 768px) {
+  .gm-woo-categories {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.gm-woo-categories > div {
+  margin: 0px;
+  padding: 0px;
+}
+div.gm-woo-category {
+  position: relative;
+  margin: 0px;
+  display: flex;
+  height: 15rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+  padding: 0px;
+}
+.gm-woo-category h2 {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.gm-woo-category a {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.gm-woo-category img {
+  min-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 /** prose to editor */
 body {
   margin-left: auto;

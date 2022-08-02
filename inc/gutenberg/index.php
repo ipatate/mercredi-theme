@@ -3,7 +3,6 @@
 namespace Goodmotion\inc\gutenberg;
 
 
-// require_once(dirname(__FILE__) . '/settings.php');
 require_once(dirname(__FILE__) . '/blocks.php');
 require_once(dirname(__FILE__) . '/patterns.php');
 
@@ -19,7 +18,7 @@ function gutenberg_css()
   add_theme_support('wp-block-styles');
 
   // remove template support
-  remove_theme_support('block-templates');
+  // remove_theme_support('block-templates');
 }
 
 add_action('init', __NAMESPACE__ . '\gutenberg_css');
