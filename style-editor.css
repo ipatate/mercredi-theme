@@ -2267,25 +2267,75 @@ div.gm-woo-category {
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
   padding: 0px;
 }
-.gm-woo-category h2 {
+.gm-woo-category > h2 {
   position: relative;
   z-index: 10;
+  max-width: 95%;
   text-align: center;
   font-size: 1.875rem;
   line-height: 2.25rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.gm-woo-category a {
+.gm-woo-category > a {
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
 }
-.gm-woo-category img {
+.gm-woo-category a > img {
   min-height: 100%;
   width: 100%;
+  object-fit: cover;
+}
+@keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+}
+.gm-woo-category a > img:hover {
+  animation: kenburns-top 10s ease-out both;
+}
+.gm-woo-category > h2 span {
+  position: relative;
+  top: -0.125rem;
+  display: flex;
+  height: 1.5rem;
+  align-items: center;
+}
+.gm-woo-category > h2 span::before {
+  margin-right: 0.25rem;
+  height: 1px;
+  flex: 1 1 0%;
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.gm-woo-category > h2 span::after {
+  margin-left: 0.25rem;
+  height: 1px;
+  flex: 1 1 0%;
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.gm-woo-category > h2 span > span {
+  display: flex;
+  height: 1.5rem;
+  width: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.gm-woo-category > h2 span > span > img {
+  height: auto;
+  max-width: none;
   object-fit: cover;
 }
 /** prose to editor */

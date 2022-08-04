@@ -10,13 +10,25 @@ div.gm-woo-category {
   @apply relative flex items-center justify-center w-full p-0 m-0 overflow-hidden bg-gray-300 h-60;
 }
 
-.gm-woo-category h2 {
-  @apply relative z-10 text-3xl text-center text-white;
+.gm-woo-category > h2 {
+  @apply relative z-10 text-3xl text-center text-white max-w-[95%];
 }
 
-.gm-woo-category a {
+.gm-woo-category > a {
   @apply absolute top-0 bottom-0 left-0 right-0;
 }
-.gm-woo-category img {
-  @apply object-cover w-full min-h-full;
+.gm-woo-category a > img {
+  @apply object-cover w-full min-h-full hover:animate-kenburns-top;
+}
+
+.gm-woo-category > h2 span {
+  @apply relative -top-0.5 h-6 flex items-center before:h-[1px] before:bg-white before:flex-1 before:mr-1 after:ml-1 after:h-[1px] after:bg-white after:flex-1;
+}
+
+.gm-woo-category > h2 span > span {
+  @apply flex items-center justify-center w-6 h-6 overflow-hidden;
+}
+
+.gm-woo-category > h2 span > span > img {
+  @apply object-cover h-auto max-w-none;
 }

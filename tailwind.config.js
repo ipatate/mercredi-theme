@@ -11,6 +11,21 @@ module.exports = {
       body: ['Roboto', 'helvetica', 'arial', 'sans-serif'],
     },
     extend: {
+      animation: {
+        'kenburns-top': 'kenburns-top 10s ease-out both',
+      },
+      keyframes: {
+        'kenburns-top': {
+          '0%': {
+            transform: 'scale(1) translateY(0)',
+            'transform-origin': '50% 16%',
+          },
+          '100%': {
+            transform: 'scale(1.25) translateY(-15px)',
+            'transform-origin': 'top',
+          },
+        },
+      },
       backgroundImage: (theme) => ({
         'down-nav': "url('/assets/media/down.svg')",
         'down-nav-mobile': "url('/assets/media/arrow-left.svg')",
