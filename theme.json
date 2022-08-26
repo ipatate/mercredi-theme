@@ -16,7 +16,7 @@
       "duotone": [],
       "link": false,
       "text": true,
-      "background": false,
+      "background": true,
       "defaultGradients": false,
       "defaultPalette": false,
       "gradients": [],
@@ -33,8 +33,13 @@
         },
         {
           "slug": "accent",
-          "color": "#b08067",
+          "color": "#B08C67",
           "name": "Accent"
+        },
+        {
+          "slug": "accent-clear",
+          "color": "#E6D8CD",
+          "name": "Accent-Clear"
         },
         {
           "slug": "secondary",
@@ -52,13 +57,13 @@
       },
       "typography": {
         "font-size": {
-          "btn": "1.2em",
+          "btn": "1.1em",
           "h1": "clamp(2.25rem, 4vw, 5rem)",
           "h2": "clamp(2rem, 3vw, 3.125rem)",
           "h3": "clamp(1.8rem, 2vw, 2.5rem)"
         },
         "line-height": {
-          "tiny": 1.15,
+          "tiny": 1,
           "small": 1.2,
           "medium": 1.4,
           "normal": 1.6
@@ -69,7 +74,7 @@
       "margin": false,
       "padding": false,
       "blockGap": true,
-      "units": ["%", "px", "em", "rem", "vh", "vw"]
+      "units": ["%", "rem", "vh", "vw"]
     },
     "typography": {
       "lineHeight": false,
@@ -82,44 +87,44 @@
       "textTransform": true,
       "fontFamilies": [
         {
-          "fontFamily": "\"Roboto\", sans-serif",
-          "name": "Roboto",
-          "slug": "Roboto",
+          "fontFamily": "\"Raleway\", sans-serif",
+          "name": "Raleway",
+          "slug": "Raleway",
           "fontFace": [
             {
-              "fontFamily": "Roboto",
+              "fontFamily": "Raleway",
               "fontWeight": "400",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/roboto-v27-latin-regular.woff2"]
+              "src": ["file:./assets/fonts/Raleway-Regular.woff2"]
             },
             {
-              "fontFamily": "Roboto",
+              "fontFamily": "Raleway",
               "fontWeight": "400",
               "fontStyle": "italic",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/roboto-v27-latin-italic.woff2"]
+              "src": ["file:./assets/fonts/Raleway-Italic.woff2"]
             },
             {
-              "fontFamily": "Roboto",
+              "fontFamily": "Raleway",
               "fontWeight": "700",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/roboto-v27-latin-700.woff2"]
+              "src": ["file:./assets/fonts/Raleway-Bold.woff2"]
             }
           ]
         },
         {
-          "fontFamily": "\"Norican\", sans-serif",
-          "name": "Norican",
-          "slug": "Norican",
+          "fontFamily": "\"DancingScript\", serif",
+          "name": "DancingScript",
+          "slug": "DancingScript",
           "fontFace": [
             {
-              "fontFamily": "Norican",
-              "fontWeight": "400",
+              "fontFamily": "DancingScript",
+              "fontWeight": "700",
               "fontStyle": "normal",
               "fontStretch": "normal",
-              "src": ["file:./assets/fonts/Norican-Regular.woff2"]
+              "src": ["file:./assets/fonts/DancingScript-Bold.woff2"]
             }
           ]
         }
@@ -154,7 +159,7 @@
   },
   "styles": {
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--roboto)",
+      "fontFamily": "var(--wp--preset--font-family--raleway)",
       "lineHeight": "var(--wp--custom--typography--line-height--normal)",
       "fontSize": "var(--wp--preset--font-size--medium)"
     },
@@ -177,7 +182,7 @@
           "text": "var(--wp--preset--color--background)"
         },
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontFamily": "var(--wp--preset--font-family--raleway)",
           "fontWeight": "600",
           "fontSize": "var(--wp--custom--typography--font-size--btn)",
           "textTransform": "uppercase"
@@ -185,7 +190,7 @@
       },
       "core/post-title": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontFamily": "var(--wp--preset--font-family--dancing-script)",
           "fontWeight": "600",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--custom--typography--font-size--h-1)"
@@ -203,7 +208,7 @@
       },
       "core/site-title": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--roboto)",
+          "fontFamily": "var(--wp--preset--font-family--raleway)",
           "lineHeight": "var(--wp--custom--typography--line-height--normal)",
           "fontSize": "var(--wp--preset--font-size--medium)",
           "fontStyle": "italic",
@@ -214,7 +219,7 @@
     "elements": {
       "h1": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--norican)",
+          "fontFamily": "var(--wp--preset--font-family--dancing-script)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--custom--typography--font-size--h-1)"
@@ -222,15 +227,15 @@
       },
       "h2": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--norican)",
+          "fontFamily": "var(--wp--preset--font-family--dancing-script)",
           "fontWeight": "700",
-          "lineHeight": "var(--wp--custom--typography--line-height--small)",
+          "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--custom--typography--font-size--h-2)"
         }
       },
       "h3": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--norican)",
+          "fontFamily": "var(--wp--preset--font-family--dancing-script)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--custom--typography--font-size--h-3)"
@@ -238,7 +243,7 @@
       },
       "h4": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--norican)",
+          "fontFamily": "var(--wp--preset--font-family--dancing-script)",
           "fontWeight": "700",
           "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
           "fontSize": "var(--wp--preset--font-size--x-large)"
@@ -246,25 +251,23 @@
       },
       "h5": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--norican)",
+          "fontFamily": "var(--wp--preset--font-family--dancing-script)",
           "fontWeight": "700",
-          "textTransform": "uppercase",
-          "lineHeight": "var(--wp--custom--typography--line-height--normal)",
-          "fontSize": "var(--wp--preset--font-size--medium)"
+          "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
+          "fontSize": "var(--wp--preset--font-size--large)"
         }
       },
       "h6": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--norican)",
+          "fontFamily": "var(--wp--preset--font-family--dancing-script)",
           "fontWeight": "700",
-          "textTransform": "uppercase",
-          "lineHeight": "var(--wp--custom--typography--line-height--normal)",
-          "fontSize": "var(--wp--preset--font-size--medium)"
+          "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
+          "fontSize": "var(--wp--preset--font-size--large)"
         }
       },
       "link": {
         "color": {
-          "text": "var(--wp--preset--color--accent)"
+          "text": "var(--wp--preset--color--secondary)"
         }
       }
     }

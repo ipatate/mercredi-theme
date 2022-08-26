@@ -3,7 +3,7 @@
 namespace Goodmotion\inc\woocommerce;
 
 require_once(dirname(__FILE__) . '/download.php');
-require_once(dirname(__FILE__) . '/field.php');
+// require_once(dirname(__FILE__) . '/field.php');
 
 function theme_add_woocommerce_support()
 {
@@ -13,13 +13,15 @@ function theme_add_woocommerce_support()
 add_action('after_setup_theme', __NAMESPACE__ . '\theme_add_woocommerce_support');
 
 
+add_filter('wc_product_sku_enabled', '__return_false');
+
+
 function logout()
 {
-  $items = '';
   if (is_user_logged_in()) {
-    $items .= '<a href="' . wp_logout_url(get_permalink(wc_get_page_id('myaccount'))) . '">Log Out</a>';
+    return '<a href="' . wp_logout_url(get_permalink(wc_get_page_id('myaccount'))) . '">' . __('Log Out') . '</a>';
   }
-  return $items;
+  return '<a href="' . get_permalink(wc_get_page_id('myaccount')) . '">' . __('Log In') . '</a>';
 }
 
 
@@ -80,3 +82,15 @@ function dequeue_styles($enqueue_styles)
 
 // Or just remove them all in one line
 // add_filter('woocommerce_enqueue_styles', '__return_false');
+
+
+function hide_in_stock_message($html, $text, $product)
+{
+  $availability = $product->get_availability();
+  if (isset($availability['class']) && 'in-stock' === $availability['class']) {
+    return '';
+  }
+  return $html;
+}
+
+add_filter('woocommerce_stock_html', __NAMESPACE__ .  '\hide_in_stock_message', 10, 3);

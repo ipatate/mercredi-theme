@@ -24,7 +24,7 @@ h2.gm-instagram-feed-title span {
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-video a {
-  @apply absolute z-30 flex items-center justify-center w-10 h-10 text-white rounded-full bg-accent top-2 right-2 after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:z-30 after:opacity-0;
+  @apply absolute z-30 flex items-center justify-center w-10 h-10 text-white rounded-full bg-secondary top-2 right-2 after:absolute after:top-0 after:bottom-0 after:left-0 after:right-0 after:z-30 after:opacity-0;
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element.gm-instagram-image a span {
@@ -50,11 +50,11 @@ h2.gm-instagram-feed-title span {
 }
 
 .gm-instagram-feed div.gm-instagram-video .gm-instagram-video-content video {
-  @apply object-cover w-full min-w-full m-0 max-w-none;
+  @apply object-cover w-full min-w-full m-0 -mt-[33%] max-w-none;
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element button {
-  @apply absolute top-0 bottom-0 left-0 right-0 z-20 flex items-start justify-start w-full fill-current text-accent;
+  @apply absolute top-0 bottom-0 left-0 right-0 z-20 flex items-start justify-start w-full fill-current text-secondary;
 }
 
 .gm-instagram-feed div.gm-instagram-feed-element button svg {
@@ -91,7 +91,7 @@ h2.gm-instagram-feed-title span {
 .gm-instagram-feed
   div.gm-instagram-feed-element
   .gm-instagram-feed-element-info {
-  @apply absolute bottom-0 left-0 right-0 flex text-xs text-white bg-accent opacity-80 min-h-[50px] items-stretch justify-center;
+  @apply absolute bottom-0 left-0 right-0 flex text-xs text-white bg-secondary opacity-80 min-h-[50px] items-stretch justify-center;
 }
 
 .gm-instagram-feed
@@ -119,7 +119,7 @@ h2.gm-instagram-feed-title span {
 }
 
 .gm-instagram-link a {
-  @apply z-10 flex items-center px-4 py-1 -mt-5 no-underline bg-white border-2 rounded text-accent border-accent before:block before:w-5 before:h-5 before:my-0 before:mr-2 before:bg-center before:bg-no-repeat before:bg-cover before:bg-instagram-accent;
+  @apply z-10 flex items-center px-4 py-1 -mt-5 no-underline bg-white border-2 text-secondary border-secondary before:block before:w-5 before:h-5 before:my-0 before:mr-2 before:bg-center before:bg-no-repeat before:bg-cover before:bg-instagram-accent;
 }
 
 .gm-instagram-link a:hover {

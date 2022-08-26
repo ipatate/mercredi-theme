@@ -8,7 +8,21 @@ h3,
 h4,
 h5,
 h6 {
-  @apply relative font-sherif;
+  @apply relative;
+}
+
+h1,
+h2 {
+  @apply mt-8 mb-12;
+}
+
+h3 {
+  @apply mt-5 mb-8;
+}
+
+h5,
+h6 {
+  @apply mt-2 mb-5;
 }
 
 .screen-reader-text {
@@ -31,8 +45,6 @@ h6 {
 
 /** title hidden */
 .article-content > h1.article-h1.gm-title-h {
-  /* position: absolute;
-  top: -3000px; */
   @apply w-0 h-0 p-0 m-0 overflow-hidden;
 }
 
@@ -41,14 +53,14 @@ h6 {
   @apply px-0 mx-auto max-w-none md:px-0 xl:px-0 min-h-[400px];
 }
 
-.article-content h2 {
+/* .article-content h2 {
   @apply my-8 text-3xl md:my-12 md:text-4xl;
-}
+} */
 
-.article-content > h1.article-h1,
+/* .article-content > h1.article-h1,
 .gm-h {
   @apply px-2 mb-10 text-4xl md:mb-16 md:text-7xl;
-}
+} */
 
 .article-content p {
   @apply my-2;
@@ -76,10 +88,6 @@ h6 {
 /** btn */
 .gm-btn {
   @apply inline-flex items-center justify-center w-auto px-4 py-2 text-white rounded bg-accent;
-}
-
-.wp-block-button a.wp-block-button__link {
-  @apply rounded;
 }
 
 /** icon */

@@ -5,10 +5,10 @@ module.exports = {
   content: ['./**/*.{php,twig,html}', './assets/*.{js,jsx,ts,tsx,vue}'],
   theme: {
     fontFamily: {
-      sans: ['Roboto', 'helvetica', 'arial', 'sans-serif'],
-      display: ['Roboto', 'helvetica', 'arial', 'sans-serif'],
-      sherif: ['Norican', 'helvetica', 'arial', 'sans-serif'],
-      body: ['Roboto', 'helvetica', 'arial', 'sans-serif'],
+      sans: ['Raleway', 'helvetica', 'arial', 'sans-serif'],
+      display: ['Raleway', 'helvetica', 'arial', 'sans-serif'],
+      sherif: ['DancingScript', 'helvetica', 'arial', 'sans-serif'],
+      body: ['Raleway', 'helvetica', 'arial', 'sans-serif'],
     },
     extend: {
       animation: {
@@ -43,8 +43,9 @@ module.exports = {
           'url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBhcmlhLWhpZGRlbj0idHJ1ZSIgcm9sZT0iaW1nIiBjbGFzcz0iaWNvbmlmeSBpY29uaWZ5LS1pb24iIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0IiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzc0NzI4MCIgZD0iTTQ1NC42NSAxNjkuNEEzMS44MiAzMS44MiAwIDAgMCA0MzIgMTYwaC02NHYtMTZhMTEyIDExMiAwIDAgMC0yMjQgMHYxNkg4MGEzMiAzMiAwIDAgMC0zMiAzMnYyMTZjMCAzOSAzMyA3MiA3MiA3MmgyNzJhNzIuMjIgNzIuMjIgMCAwIDAgNTAuNDgtMjAuNTVhNjkuNDggNjkuNDggMCAwIDAgMjEuNTItNTAuMlYxOTJhMzEuNzUgMzEuNzUgMCAwIDAtOS4zNS0yMi42Wk0xNzYgMTQ0YTgwIDgwIDAgMCAxIDE2MCAwdjE2SDE3NlptMTkyIDk2YTExMiAxMTIgMCAwIDEtMjI0IDB2LTE2YTE2IDE2IDAgMCAxIDMyIDB2MTZhODAgODAgMCAwIDAgMTYwIDB2LTE2YTE2IDE2IDAgMCAxIDMyIDBaIj48L3BhdGg+PC9zdmc+)',
       }),
       colors: {
-        // accent: '#450B40',
-        accent: '#b08067',
+        secondary: '#450B40',
+        accent: '#B08C67',
+        'accent-clear': '#E6D8CD',
       },
       typography: (theme) => ({
         DEFAULT: {
