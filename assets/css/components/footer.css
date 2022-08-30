@@ -1,26 +1,29 @@
 .gm-footer {
-  @apply bg-accent;
+  @apply bg-accent-clear;
 }
 
 .gm-footer .gm-wrapper {
-  @apply flex flex-col items-stretch text-white min-h-[300px] px-2 lg:px-12 py-5 md:py-2 w-full mx-auto;
+  @apply flex flex-col items-stretch w-full px-2 py-5 mx-auto text-accent xl:px-10 md:py-2;
 }
 
 .gm-footer .gm-wrapper > div {
-  @apply flex-1 mb-2;
+  @apply flex items-center flex-1 mb-2;
+}
+.gm-footer .gm-wrapper p {
+  @apply m-0;
 }
 
 /** bloc logo */
 .gm-footer .gm-wrapper .gm-logo {
-  @apply flex flex-row justify-center mb-4;
+  @apply flex flex-row justify-center items-center lg:w-[10%];
 }
 
 .gm-footer .gm-wrapper .gm-logo p {
-  @apply mx-0 my-0 text-sm text-white;
+  @apply mx-0 my-0 text-sm text-secondary;
 }
 
 .gm-footer .gm-wrapper .gm-logo a {
-  @apply relative flex z-10 h-14 w-[180px] md:w-[180px] md:h-14 ml-2 my-0 bg-contain bg-logo-white bg-no-repeat;
+  @apply relative flex z-10 h-16 w-[80px] md:w-[61px] md:h-10 my-0 bg-contain bg-logo-leaf bg-no-repeat;
 }
 
 .gm-footer .gm-wrapper .gm-logo a span {
@@ -30,50 +33,40 @@
 /** bloc content central */
 
 .gm-footer .gm-wrapper .gm-footer-content {
-  @apply flex flex-col mx-4 my-3 md:flex-row;
+  @apply flex flex-col mx-0 my-3 lg:flex-row;
 }
 
 /** bloc nav */
 .gm-footer .gm-wrapper .gm-footer-nav {
-  @apply flex flex-col items-center justify-center flex-1 py-4 m-0 text-center md:text-left;
+  @apply flex items-center justify-center lg:justify-start w-full lg:w-[45%] py-4 m-0 text-center md:text-left;
+}
+
+.gm-footer .gm-wrapper .gm-footer-nav ul {
+  @apply flex flex-col md:flex-row;
+}
+
+.gm-footer .gm-wrapper .gm-footer-nav li {
+  @apply text-center md:mr-5;
 }
 
 .gm-footer .gm-wrapper .gm-footer-nav a {
-  @apply underline;
-}
-
-/** bloc address */
-.gm-footer-address {
-  @apply mt-4 text-center;
+  @apply text-sm text-secondary;
 }
 
 /** bloc social */
 .gm-footer-social {
-  @apply flex flex-col items-center justify-center flex-1 py-3 md:py-0;
-}
-.gm-footer-social > div:first-child {
-  @apply text-2xl font-bold capitalize;
+  @apply flex flex-col items-center justify-between lg:justify-center flex-1 py-3 md:flex-row md:py-0 w-full lg:w-[45%];
 }
 
-.gm-footer-social > div:last-child {
-  @apply flex;
+.gm-footer-social > div {
+  @apply flex md:ml-10;
 }
 
 .gm-footer-social a {
-  @apply flex w-8 h-8 m-2;
+  @apply flex w-8 h-8 m-2 text-secondary;
 }
 
 /** bottom */
 .gm-footer-reserved {
-  @apply flex flex-col-reverse justify-end pt-4 border-t border-white md:flex-row;
-}
-
-.gm-footer-reserved p:first-child {
-  @apply text-center md:text-left;
-}
-.gm-footer-reserved p:last-child {
-  @apply mb-3 text-center md:mb-0 md:text-right;
-}
-.gm-footer-reserved p {
-  @apply flex-1 m-0;
+  @apply pt-6 m-0 text-center lg:text-right lg:flex-1 lg:pt-0;
 }

@@ -29,6 +29,7 @@ module.exports = {
       backgroundImage: (theme) => ({
         'down-nav': "url('/assets/media/down.svg')",
         'down-nav-mobile': "url('/assets/media/arrow-left.svg')",
+        'logo-leaf': "url('/assets/media/logoblancfeuille.png')",
         logo: "url('/assets/media/logo_mercredi_feuille_creme.png')",
         'logo-white': "url('/assets/media/logo_mercredi_feuille_creme.png')",
         'logo-white-sm':

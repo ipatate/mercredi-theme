@@ -6,39 +6,33 @@
           {% include "menu.twig" with {'items': menu_secondary.get_items} %}
         </nav>
       </div>
-      <div class="gm-footer-address">
-          <p><strong>Mercredi Biscuiterie</strong><br />{{ function('do_shortcode', '[merc-address]') }}<br />{{ function('do_shortcode', '[merc-phone]') }}</p>
-      </div>
-    <div class="gm-footer-social">
-      <div>
-        <a
-          target="_blank"
-          class="gm-icon gm-facebook-icon"
-          href="{{ options.facebook_page }}"
-          title="{{ __('follow us on facebook', 'goodmotion-theme') }}"
-        >
-          <span>{{ options.facebook_page }}</span>
-        </a>
-        <a
-          target="_blank"
-          class="gm-icon gm-instagram-icon"
-          href="{{ options.instagram_page }}"
-          title="{{ __('follow us on instagram', 'goodmotion-theme') }}"
-        >
-          <span>{{ options.instagram_page }}</span>
+      <div class="gm-logo">
+        <a href="{{ home_url }}" title="{{ rel }}">
+          <span>{{ site.name }}</span>
         </a>
       </div>
-    </div>
-  </div>
-  <div class="gm-logo">
-      <a href="{{ home_url }}" title="{{ rel }}">
-        <span>{{ site.name }}</span>
-      </a>
-  </div>
-  <div class="gm-footer-reserved">
-    <p class="goodmotion">Made with <span role="img" aria-label="love">❤️</span> by <a href="https://www.goodmotion.fr/" target="_blank" title="creation de site web">Goodmotion</a></p>
-    <p>
-      {{ site.name }} {{ "now"|date("Y") }} - {{ __('All rights reserved.') }}
-    </p>
+      <div class="gm-footer-social">
+        <div>
+          <a
+            target="_blank"
+            class="gm-icon gm-facebook-icon"
+            href="{{ options.facebook_page }}"
+            title="{{ __('follow us on facebook', 'goodmotion-theme') }}"
+          >
+            <span>{{ options.facebook_page }}</span>
+          </a>
+          <a
+            target="_blank"
+            class="gm-icon gm-instagram-icon"
+            href="{{ options.instagram_page }}"
+            title="{{ __('follow us on instagram', 'goodmotion-theme') }}"
+          >
+            <span>{{ options.instagram_page }}</span>
+          </a>
+        </div>
+        <p class="gm-footer-reserved">
+          {{ site.name }} {{ "now"|date("Y") }} - {{ __('All rights reserved.') }}
+        </p>
+      </div>
   </div>
 </footer>
