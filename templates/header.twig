@@ -1,63 +1,56 @@
 <header class="gm-header">
   {% block header %}
-  <div class="wrapper">
-    <div class="gm-logo" role="banner">
-      <a
-        class="gm-logo-link"
-        href="{{ site.url }}"
-        rel="home"
-        title="{{ site.name }}"
-      >
-        {% set logoSmall = theme.link ~ '/assets/media/logo_mercredi_blanc-sm'
-        %} {% set logo = theme.link ~ '/assets/media/logo_mercredi_blanc' %}
-        <picture>
-          <source
-            media="(max-width: 600px)"
-            srcset="{{logoSmall ~ '.png' |resize(130)}}"
-            type="image/webp"
-            width="130"
-            height="50"
-          />
-          <source
-            media="(max-width: 600px)"
-            srcset="{{logoSmall ~ '.png' |resize(130)}}"
-            type="image/png"
-            width="130"
-            height="50"
-          />
-          <source srcset="{{logo ~ '.png' |resize(170)}}" type="image/webp" />
-          <img
-            src="{{logo ~ '.png' |resize(170)}}"
-            alt="{{ site.name }}"
-            type="image/png"
-            width="170"
-            height="65"
-            loading="eager"
-          />
-        </picture>
-      </a>
+    <div class="wrapper">
+      <div class="gm-logo" role="banner">
+        <a class="gm-logo-link"
+          href="{{ site.url }}"
+          rel="home"
+          title="{{ site.name }}">
+          {% set logoSmall = theme.link ~ '/assets/media/logo_mercredi_blanc-sm'
+          %} {% set logo = theme.link
+            ~ '/assets/media/logo_mercredi_feuille_creme'
+          %}
+          <picture>
+            <source media="(max-width: 600px)"
+              srcset="{{ logoSmall ~ ('.png'|resize(130)) }}"
+              type="image/webp"
+              width="130"
+              height="50" />
+            <source media="(max-width: 600px)"
+              srcset="{{ logoSmall ~ ('.png'|resize(130)) }}"
+              type="image/png"
+              width="130"
+              height="50" />
+            <source srcset="{{ logo ~ ('.png'|resize(170)) }}"
+              type="image/webp" />
+            <img src="{{ logo ~ ('.png'|resize(170)) }}"
+              alt="{{ site.name }}"
+              type="image/png"
+              width="200"
+              height="80"
+              loading="eager" />
+          </picture>
+        </a>
+      </div>
+      <nav id="nav-main"
+        class="gm-nav-main"
+        role="navigation"
+        aria-label="{{ __('Primary nav', 'goodmotion-theme') }}">
+        {% include 'menu.twig' with {
+          items: menu.get_items,
+          home_url: home_url
+        } %}
+      </nav>
+      <div class="gm-nav-button">
+        <button type="button"
+          aria-label="Nav button"
+          aria-expanded="false"
+          class="gm-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
-    <nav
-      id="nav-main"
-      class="gm-nav-main"
-      role="navigation"
-      aria-label="{{ __('Primary nav', 'goodmotion-theme') }}"
-    >
-      {% include "menu.twig" with {'items': menu.get_items, 'home_url':
-      home_url} %}
-    </nav>
-    <div class="gm-nav-button">
-      <button
-        type="button"
-        aria-label="Nav button"
-        aria-expanded="false"
-        class="gm-burger"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
   {% endblock %}
 </header>

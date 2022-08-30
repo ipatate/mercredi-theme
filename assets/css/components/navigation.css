@@ -54,7 +54,7 @@
 
 /** first level */
 .gm-nav-main > ul {
-  @apply flex flex-col items-stretch w-full lg:flex-row lg:justify-center;
+  @apply flex flex-col items-stretch w-full lg:flex-row lg:justify-end;
 }
 
 .gm-nav-main > ul.nav-has-lot {
@@ -66,7 +66,7 @@
 }
 
 .gm-nav-main > ul > li.current_page_item a {
-  @apply border-0 border-white border-solid lg:border-b-4;
+  @apply border-0 border-solid border-accent-clear lg:border-b;
 }
 
 .gm-nav-main > ul > li:first-child.current_page_item a {
@@ -102,7 +102,7 @@
 /** link */
 .gm-nav-main a {
   @apply block w-full px-4 py-4 text-2xl text-accent lg:pt-3 whitespace-nowrap lg:focus:underline;
-  @apply lg:text-base lg:text-white lg:w-auto;
+  @apply lg:text-base lg:text-accent-clear lg:w-auto;
 }
 
 .gm-nav-main .current-menu-item > a {
@@ -128,7 +128,7 @@
 
 /** arrow down when it has children's */
 .gm-nav-main ul > li.menu-item-has-children > a::after {
-  @apply flex items-center hidden w-4 h-2 ml-3 bg-no-repeat bg-down-nav lg:flex;
+  @apply items-center hidden w-4 h-2 ml-3 bg-no-repeat bg-down-nav lg:flex;
   content: '';
 }
 

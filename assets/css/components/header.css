@@ -1,13 +1,13 @@
 .gm-header {
-  @apply fixed left-0 right-0 z-50 flex max-w-full px-2 py-6 transition duration-500 transform translate-y-0 shadow-lg bg-[rgba(123,123,123,0.2)] xl:px-8 xl:py-6 lg:-translate-y-full;
+  @apply fixed left-0 right-0 z-50 flex max-w-full px-2 py-6 transition duration-500 transform translate-y-0 shadow-lg xl:px-8 xl:py-6 lg:-translate-y-full bg-accent;
 }
-
+/* bg-[rgba(123,123,123,0.2)]  */
 .gm-header .wrapper {
   @apply flex items-stretch w-full mx-auto max-w-screen-2xl;
 }
 
 .gm-header .gm-logo {
-  @apply relative flex z-10 w-[300px] h-14 md:w-[350px] md:h-16 ml-2 my-0;
+  @apply relative flex z-10 w-[300px] h-14 md:w-[350px] md:h-20 ml-2 my-0;
 }
 
 .gm-header .gm-logo a {

@@ -29,9 +29,10 @@ module.exports = {
       backgroundImage: (theme) => ({
         'down-nav': "url('/assets/media/down.svg')",
         'down-nav-mobile': "url('/assets/media/arrow-left.svg')",
-        logo: "url('/assets/media/logo_mercredi.png')",
-        'logo-white': "url('/assets/media/logo_mercredi_blanc.png')",
-        'logo-white-sm': "url('/assets/media/logo_mercredi_blanc-sm.png')",
+        logo: "url('/assets/media/logo_mercredi_feuille_creme.png')",
+        'logo-white': "url('/assets/media/logo_mercredi_feuille_creme.png')",
+        'logo-white-sm':
+          "url('/assets/media/logo_mercredi_feuille_creme-sm.png')",
         instagram: "url('/assets/media/instagram.svg')",
         'instagram-accent': "url('/assets/media/instagram-accent.svg')",
         facebook: "url('/assets/media/facebook.svg')",
