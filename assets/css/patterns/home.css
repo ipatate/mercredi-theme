@@ -22,11 +22,11 @@
 
 /** bloc home */
 .gm-bloc-home {
-  @apply py-14;
+  @apply pt-16 lg:py-14;
 }
 
 .gm-bloc-home > div {
-  @apply relative max-w-screen-lg mx-auto pr-52 after:w-40 after:h-40 after:bg-no-repeat after:bg-contain after:flex after:absolute after:right-10 after:-bottom-10;
+  @apply relative max-w-screen-lg mx-auto after:w-20 after:h-20 lg:pr-52 lg:after:w-40 lg:after:h-40 after:bg-no-repeat after:bg-contain after:flex after:relative lg:after:absolute lg:after:right-10 lg:after:bottom-10 after:-bottom-14 after:mx-auto;
 }
 
 .gm-bloc-home > div h2 {
@@ -42,7 +42,7 @@
 }
 
 .gm-bloc-home.fleurblanche > div {
-  @apply pr-0 after:right-auto after:left-10 after:bottom-auto after:top-0 pl-80;
+  @apply lg:pr-0 lg:after:right-auto lg:after:left-10 lg:after:bottom-auto lg:after:top-0 lg:pl-80;
 }
 
 .gm-bloc-home.feuilleblanche > div {
@@ -50,20 +50,24 @@
 }
 
 .gm-bloc-home.feuillenoir > div {
-  @apply after:bg-feuillenoire pr-80 after:bottom-10;
+  @apply px-10 after:bg-feuillenoire lg:pl-0 lg:pr-80 after:-bottom-8 lg:after:bottom-10;
+}
+
+.gm-bloc-home.feuillenoir-star > div {
+  @apply px-10 after:bg-feuillenoire2 lg:pl-0 lg:pr-80 lg:after:-bottom-10 lg:after:w-28 lg:after:h-28 lg:after:right-32;
 }
 
 /** bloc triptic */
 .gm-home-triptic {
-  @apply py-12;
+  @apply py-16;
 }
 
 .gm-home-triptic > div {
-  @apply relative grid max-w-screen-lg grid-cols-3 gap-6 p-0 mx-auto;
+  @apply relative grid max-w-screen-lg gap-6 p-0 mx-auto lg:grid-cols-3;
 }
 
 .gm-home-triptic > div > div.gm-home-triptic-element {
-  @apply relative m-0 overflow-hidden h-[400px];
+  @apply relative m-0 overflow-hidden h-36 lg:h-[400px];
 }
 
 .gm-home-triptic > div > div.gm-home-triptic-element figure,
@@ -75,7 +79,7 @@
 }
 
 .gm-home-triptic > div > div.gm-home-triptic-element a {
-  @apply absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-2xl font-bold font-display;
+  @apply absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-4xl font-bold transition-all font-sherif bg-gray-800/20 hover:bg-gray-800/10;
 }
 
 .gm-home-triptic > div > div.gm-home-triptic-element img {

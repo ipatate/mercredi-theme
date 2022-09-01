@@ -52,6 +52,7 @@ module.exports = {
         feuilleblanche: "url('/assets/media/feuilleblanche-crop.png')",
         fleurblanche: "url('/assets/media/fleurblanche-crop.png')",
         feuillenoire: "url('/assets/media/feuillenoire-crop.png')",
+        feuillenoire2: "url('/assets/media/feuillenoire-star-crop.png')",
       },
       colors: {
         secondary: '#450B40',
