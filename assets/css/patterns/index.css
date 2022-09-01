@@ -1,1 +1,9 @@
 @import './home.css';
+
+.gm-wrapper > div {
+  @apply max-w-screen-lg py-10 mx-auto;
+}
+
+.gm-wrapper > div .gm-mailchimp-form {
+  @apply max-w-xl mx-auto mb-20;
+}
