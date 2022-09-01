@@ -13,16 +13,20 @@ h6 {
 
 h1,
 h2 {
-  @apply mt-8 mb-12;
+  @apply px-4 mx-auto mt-8 mb-12 max-w-screen-2xl;
 }
 
 h3 {
-  @apply mt-5 mb-8;
+  @apply mx-auto mt-5 mb-8 max-w-screen-2xl;
 }
 
 h5,
 h6 {
-  @apply mt-2 mb-5;
+  @apply mx-auto mt-2 mb-5 max-w-screen-2xl;
+}
+
+p {
+  @apply mx-auto max-w-screen-2xl;
 }
 
 .screen-reader-text {

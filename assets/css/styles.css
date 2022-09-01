@@ -23,6 +23,9 @@
 @import 'block-wp.css';
 @import 'blocks/blocks.css';
 
+/** patterns */
+@import 'patterns/index.css';
+
 /** store **/
 @import 'woo/styles.css';
 

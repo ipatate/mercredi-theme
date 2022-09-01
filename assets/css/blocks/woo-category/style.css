@@ -1,5 +1,5 @@
 .gm-woo-categories {
-  @apply grid grid-cols-1 gap-3 md:grid-cols-3;
+  @apply grid grid-cols-1 gap-3 py-16 mx-auto md:grid-cols-3 max-w-screen-2xl;
 }
 
 .gm-woo-categories > div {
@@ -26,9 +26,9 @@ div.gm-woo-category {
 }
 
 .gm-woo-category > h2 span > span {
-  @apply flex items-center justify-center w-6 h-6 overflow-hidden;
+  @apply flex items-center justify-center w-6 h-6 mt-3 overflow-hidden;
 }
 
 .gm-woo-category > h2 span > span > img {
-  @apply object-cover h-auto max-w-none;
+  @apply object-contain h-auto max-w-full;
 }

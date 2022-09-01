@@ -43,4 +43,4 @@ function editor_enqueue()
   wp_enqueue_script('custom-editor-script', get_template_directory_uri() . '/editor/js/reset.js', array('wp-blocks', 'wp-dom-ready', 'wp-edit-post'), '1.0', true);
 }
 
-add_action('enqueue_block_editor_assets', __NAMESPACE__ . '\editor_enqueue');
+// add_action('enqueue_block_editor_assets', __NAMESPACE__ . '\editor_enqueue');

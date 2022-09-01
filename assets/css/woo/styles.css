@@ -24,7 +24,7 @@ div.woocommerce h5 {
 /** header */
 
 .gm-head-woocommerce {
-  @apply flex justify-end w-full col-start-1 row-start-1 mb-8 md:col-end-5;
+  @apply flex justify-end w-full col-start-1 row-start-1 mx-auto mt-10 mb-8 md:col-end-5 max-w-screen-2xl;
 }
 
 .gm-head-woocommerce a {
@@ -66,6 +66,10 @@ div.woocommerce h5 {
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
   @apply px-4 py-2.5 text-xs text-white uppercase bg-accent hover:bg-accent/80 hover:text-white;
+}
+
+.wc-forward {
+  @apply hidden;
 }
 
 /** input */
@@ -175,4 +179,23 @@ p.woocommerce-notice {
 
 #ship-to-different-address {
   @apply text-xl font-display;
+}
+
+/** grid */
+.woocommerce div.product,
+.woocommerce .woocommerce-breadcrumb,
+.woocommerce-notices-wrapper,
+.woocommerce-products-header,
+.wc-block-grid,
+.woocommerce .products ul,
+.woocommerce ul.products {
+  @apply px-4 mx-auto max-w-screen-2xl;
+}
+
+.woocommerce .woocommerce-result-count {
+  @apply hidden;
+}
+
+.woocommerce .woocommerce-ordering {
+  @apply hidden;
 }

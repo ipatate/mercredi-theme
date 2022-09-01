@@ -1,5 +1,5 @@
 .gm-not-hero {
-  @apply min-h-[130px] md:min-h-[170px];
+  @apply min-h-[70px] md:min-h-[90px] lg:min-h-[110px];
 }
 
 .gm-hero-container {
@@ -146,5 +146,5 @@
 }
 
 .gm-hero-wrapper-page .gm-hero .hero_content {
-  @apply top-[40%] md:top-[50%]
+  @apply top-[40%] md:top-[50%];
 }

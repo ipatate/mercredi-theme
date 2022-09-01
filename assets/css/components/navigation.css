@@ -6,10 +6,10 @@
 }
 
 .gm-burger {
-  @apply relative z-30 flex items-center w-10 transform bg-transparent cursor-pointer h-9;
+  @apply relative z-30 flex items-center w-10 h-8 transform bg-transparent cursor-pointer;
 }
 .gm-burger span {
-  @apply absolute left-0 block w-full h-[5px] transition transform bg-white;
+  @apply absolute left-0 block w-full h-[4px] transition transform bg-accent-clear;
 }
 
 .gm-burger span:nth-child(1) {
@@ -17,7 +17,7 @@
 }
 
 .gm-burger span:nth-child(2) {
-  @apply top-4;
+  @apply top-3.5;
 }
 
 .gm-burger span:nth-child(3) {

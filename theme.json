@@ -1,11 +1,12 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.1/theme.json",
+  "$schema": "https://schemas.wp.org/wp/6.0/theme.json",
   "version": 2,
   "customTemplates": [],
   "settings": {
+    "appearanceTools": false,
     "border": {
-      "radius": false,
       "color": false,
+      "radius": false,
       "style": false,
       "width": false
     },
@@ -154,7 +155,7 @@
     },
     "layout": {
       "contentSize": "90%",
-      "wideSize": "98%"
+      "wideSize": "100%"
     }
   },
   "styles": {
