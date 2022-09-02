@@ -6,7 +6,9 @@ namespace GoodmotionStarter\inc\shortcode;
 
 function shortcode_address($atts, $content)
 {
-  return  get_field('infos_address', 'options');
+  $address = get_field('infos_address', 'options');
+  $address_store = get_field('infos_address_store', 'options');
+  return '<div>' . $address . '</div><div>' . $address_store . '</div>';
 }
 
 add_shortcode('merc-address', __NAMESPACE__ . '\shortcode_address');

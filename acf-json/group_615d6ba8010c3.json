@@ -22,6 +22,25 @@
             "new_lines": "br"
         },
         {
+            "key": "field_6311bd7ab6235",
+            "label": "Address Store",
+            "name": "infos_address_store",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "br"
+        },
+        {
             "key": "field_615d6c5a90d98",
             "label": "Phone",
             "name": "infos_phone",
@@ -95,5 +114,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633514573
+    "modified": 1662107021
 }

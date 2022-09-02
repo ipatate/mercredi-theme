@@ -1,9 +1,9 @@
 .gm-instagram-feed {
-  @apply w-full;
+  @apply w-full m-0;
 }
 
 h2.gm-instagram-feed-title {
-  @apply flex items-center mx-2 mb-2 ml-3 text-3xl md:mb-6 md:text-4xl text-accent;
+  @apply items-center hidden mx-2 mb-2 ml-3 text-3xl md:mb-6 md:text-4xl text-accent;
 }
 
 h2.gm-instagram-feed-title span {
@@ -115,7 +115,7 @@ h2.gm-instagram-feed-title span {
 }
 
 .gm-instagram-link {
-  @apply flex items-center justify-center mb-4;
+  @apply items-center justify-center hidden mb-4;
 }
 
 .gm-instagram-link a {

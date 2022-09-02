@@ -33,7 +33,7 @@
 /** bloc content central */
 
 .gm-footer .gm-wrapper .gm-footer-content {
-  @apply flex flex-col mx-0 my-3 lg:flex-row;
+  @apply flex flex-col w-full mx-0 my-3 lg:flex-row;
 }
 
 /** bloc nav */

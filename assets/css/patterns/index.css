@@ -1,9 +1,21 @@
 @import './home.css';
 
-.gm-wrapper > div {
+.gm-pattern-wrapper > div {
   @apply max-w-screen-lg py-10 mx-auto;
 }
 
-.gm-wrapper > div .gm-mailchimp-form {
-  @apply max-w-xl mx-auto mb-20;
+.gm-pattern-wrapper > div .gm-mailchimp-form {
+  @apply max-w-xl px-5 mx-auto mb-20;
+}
+
+.gm-pattern-wrapper.gm-address > div {
+  @apply flex flex-col md:flex-row;
+}
+
+.gm-pattern-wrapper.gm-address > div > div {
+  @apply flex-1 pb-6 m-0 text-center md:pb-0 text-accent;
+}
+
+.gm-pattern-wrapper.gm-address > div > div:last-child {
+  @apply pt-6 border-t border-dotted border-accent md:border-none md:pt-0;
 }

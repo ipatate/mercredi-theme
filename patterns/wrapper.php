@@ -7,8 +7,8 @@
  */
 ?>
 
-<!-- wp:group {"className":"gm-wrapper"} -->
-<div class="wp-block-group gm-wrapper">
+<!-- wp:group {"className":"gm-pattern-wrapper"} -->
+<div class="wp-block-group gm-pattern-wrapper">
   <!-- wp:group  -->
   <div class="wp-block-group">
 

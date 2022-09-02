@@ -1186,13 +1186,14 @@ figure {
   margin-left: 0.5rem;
 }
 .gm-instagram-feed {
+  margin: 0px;
   width: 100%;
 }
 h2.gm-instagram-feed-title {
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: 0.75rem;
-  display: flex;
+  display: none;
   align-items: center;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1412,7 +1413,7 @@ h2.gm-instagram-feed-title span {
 }
 .gm-instagram-link {
   margin-bottom: 1rem;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -2621,18 +2622,55 @@ div.block-editor-block-list__layout.gm-home-triptic-element p {
   top: -4rem;
   z-index: 10;
 }
-.gm-wrapper > div {
+.gm-pattern-wrapper > div {
   margin-left: auto;
   margin-right: auto;
   max-width: 1024px;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-.gm-wrapper > div .gm-mailchimp-form {
+.gm-pattern-wrapper > div .gm-mailchimp-form {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5rem;
   max-width: 36rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.gm-pattern-wrapper.gm-address > div {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .gm-pattern-wrapper.gm-address > div {
+    flex-direction: row;
+  }
+}
+.gm-pattern-wrapper.gm-address > div > div {
+  margin: 0px;
+  flex: 1 1 0%;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  --tw-text-opacity: 1;
+  color: rgb(176 140 103 / var(--tw-text-opacity));
+}
+@media (min-width: 768px) {
+  .gm-pattern-wrapper.gm-address > div > div {
+    padding-bottom: 0px;
+  }
+}
+.gm-pattern-wrapper.gm-address > div > div:last-child {
+  border-top-width: 1px;
+  border-style: dotted;
+  --tw-border-opacity: 1;
+  border-color: rgb(176 140 103 / var(--tw-border-opacity));
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .gm-pattern-wrapper.gm-address > div > div:last-child {
+    border-style: none;
+    padding-top: 0px;
+  }
 }
 a {
   color: inherit;

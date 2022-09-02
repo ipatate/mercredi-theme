@@ -74,7 +74,7 @@
     "spacing": {
       "margin": false,
       "padding": false,
-      "blockGap": true,
+      "blockGap": false,
       "units": ["%", "rem", "vh", "vw"]
     },
     "typography": {
@@ -154,7 +154,7 @@
       ]
     },
     "layout": {
-      "contentSize": "90%",
+      "contentSize": "100%",
       "wideSize": "100%"
     }
   },
