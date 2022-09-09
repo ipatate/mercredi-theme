@@ -75,7 +75,9 @@
               />
             </picture>
             <div class="hero_content hero_content_show">
-              {% if item.hero_title %}
+              {% if item.hero_title and post.meta('page_show_title') == false and key == 0 %}
+                <h1>{{ item.hero_title }}</h1>
+                {% else %}
                 <h2>{{ item.hero_title }}</h2>
               {% endif %}
               {% if item.hero_subtitle %}

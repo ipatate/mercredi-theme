@@ -13,20 +13,16 @@ h6 {
 
 h1,
 h2 {
-  @apply px-4 mx-auto mt-8 mb-12 max-w-screen-2xl;
+  @apply px-4 mx-auto mt-8 mb-12;
 }
 
 h3 {
-  @apply mx-auto mt-5 mb-8 max-w-screen-2xl;
+  @apply mx-auto mt-5 mb-8;
 }
 
 h5,
 h6 {
-  @apply mx-auto mt-2 mb-5 max-w-screen-2xl;
-}
-
-p {
-  @apply mx-auto max-w-screen-2xl;
+  @apply mx-auto mt-2 mb-5;
 }
 
 .screen-reader-text {
@@ -47,6 +43,34 @@ p {
   @apply max-w-full md:max-w-full lg:max-w-full xl:max-w-full;
 }
 
+/** width content align */
+.article-body
+  > :where(:not(.alignleft):not(.alignright):not(.alignfull):not(.alignwide)) {
+  max-width: var(--wp--custom--sizes--content);
+  @apply mx-auto;
+}
+
+.article-body > .alignleft {
+  @apply float-none mr-auto;
+}
+
+.article-body > .alignright {
+  @apply float-none ml-auto;
+}
+
+.article-body h2.alignwide,
+.article-body h2.alignfull,
+.article-body h3.alignfull,
+.article-body h3.alignwide {
+  @apply px-4;
+}
+
+/** text selection color */
+
+::selection {
+  @apply text-white bg-accent;
+}
+
 /** title hidden */
 .article-content > h1.article-h1.gm-title-h {
   @apply w-0 h-0 p-0 m-0 overflow-hidden;
@@ -55,27 +79,6 @@ p {
 /** article page content */
 .article-content {
   @apply px-0 mx-auto max-w-none md:px-0 xl:px-0 min-h-[400px];
-}
-
-/* .article-content h2 {
-  @apply my-8 text-3xl md:my-12 md:text-4xl;
-} */
-
-/* .article-content > h1.article-h1,
-.gm-h {
-  @apply px-2 mb-10 text-4xl md:mb-16 md:text-7xl;
-} */
-
-.article-content p {
-  @apply my-2;
-}
-
-.article-content .article-body > p {
-  @apply px-3 my-6 lg:my-8 lg:px-0;
-}
-
-.article-content .article-body > div > p {
-  @apply px-3 lg:px-0;
 }
 
 /** utility */

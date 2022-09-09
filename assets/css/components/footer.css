@@ -1,5 +1,5 @@
 .gm-footer {
-  @apply bg-accent-clear;
+  @apply relative z-10 bg-accent-clear;
 }
 
 .gm-footer .gm-wrapper {

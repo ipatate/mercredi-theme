@@ -3,7 +3,7 @@
 /** global */
 .woocommerce .site-main,
 div.woocommerce {
-  @apply px-8 mb-20;
+  @apply w-full max-w-full px-8 my-20;
 }
 
 div.woocommerce {

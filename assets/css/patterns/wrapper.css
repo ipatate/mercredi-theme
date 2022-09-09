@@ -1,0 +1,102 @@
+/** wrapper global */
+
+.gm-pattern-wrapper > div {
+  @apply max-w-screen-lg py-10 mx-auto;
+}
+
+.gm-pattern-wrapper > div p {
+  @apply px-6;
+}
+
+/** with mail form */
+.gm-pattern-wrapper > div .gm-mailchimp-form {
+  @apply max-w-xl px-5 mx-auto mb-20;
+}
+
+/** with address */
+.gm-pattern-wrapper.gm-address > div {
+  @apply flex flex-col md:flex-row;
+}
+
+.gm-pattern-wrapper.gm-address > div > div {
+  @apply flex-1 pb-6 m-0 text-center md:pb-0;
+}
+
+.gm-pattern-wrapper.gm-address > div > div:last-child {
+  @apply pt-6 border-t border-dotted border-accent md:border-none md:pt-0;
+}
+
+/** wrapper with fixed image */
+.gm-pattern-wrapper-img-fixed {
+  @apply grid lg:grid-cols-2;
+}
+
+.gm-pattern-wrapper-img-fixed > div {
+  @apply m-0;
+}
+
+.gm-pattern-wrapper-img-fixed > div h2 {
+  @apply px-0 py-6 mx-0;
+}
+
+.gm-pattern-wrapper-img-fixed > div:first-child {
+  @apply px-8 pt-10 pb-0 lg:px-16 lg:pt-10;
+}
+
+/** mail form */
+.gm-pattern-wrapper-img-fixed > div:first-child #gm-contact-form {
+  @apply flex-row flex-wrap mb-16;
+}
+
+.gm-pattern-wrapper-img-fixed > div:first-child #gm-contact-form input,
+.gm-pattern-wrapper-img-fixed > div:first-child #gm-contact-form textarea {
+  @apply border-accent;
+}
+
+.gm-pattern-wrapper-img-fixed
+  > div:first-child
+  #gm-contact-form
+  label[for='email'],
+.gm-pattern-wrapper-img-fixed
+  > div:first-child
+  #gm-contact-form
+  label[for='name'] {
+  @apply w-full md:w-1/2;
+}
+
+.gm-pattern-wrapper-img-fixed
+  > div:first-child
+  #gm-contact-form
+  label[for='email'] {
+  @apply md:pr-3;
+}
+
+.gm-pattern-wrapper-img-fixed
+  > div:first-child
+  #gm-contact-form
+  label[for='name'] {
+  @apply md:pl-3;
+}
+
+.gm-pattern-wrapper-img-fixed
+  > div:first-child
+  #gm-contact-form
+  label[for='message'] {
+  @apply w-full;
+}
+
+.gm-pattern-wrapper-img-fixed > div:first-child .map_block_leaflet {
+  @apply -ml-8 -mr-8 lg:-ml-16 lg:-mr-16;
+}
+
+.gm-pattern-wrapper-img-fixed_img {
+  @apply relative hidden w-[50vw] h-screen lg:block;
+}
+
+.gm-pattern-wrapper-img-fixed_img figure {
+  @apply fixed top-0 right-0 w-1/2 h-full text-right;
+}
+
+.gm-pattern-wrapper-img-fixed_img img {
+  @apply object-cover w-full h-full;
+}

@@ -50,6 +50,9 @@
       ]
     },
     "custom": {
+      "sizes": {
+        "content": "1024px"
+      },
       "spacing": {
         "small": "max(1.25rem, 5vw)",
         "medium": "clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)))",
@@ -154,7 +157,7 @@
       ]
     },
     "layout": {
-      "contentSize": "100%",
+      "contentSize": "1024px",
       "wideSize": "100%"
     }
   },
