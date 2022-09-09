@@ -1,14 +1,14 @@
-@import 'content/style.css';
-@import 'paragraph/style.css';
-@import 'media/style.css';
+/* @import 'content/style.css'; */
+/* @import 'paragraph/style.css'; */
+/* @import 'media/style.css'; */
 @import 'WrapperLine/style.css';
 @import 'WrapperLine/editor.css';
 @import 'WrapperFullText/style.css';
 @import 'WrapperFullText/editor.css';
-@import 'ImageTxt/style.css';
-@import 'ImageTxt/editor.css';
-@import 'FullImgTxt/style.css';
-@import 'FullImgTxt/editor.css';
+/* @import 'ImageTxt/style.css'; */
+/* @import 'ImageTxt/editor.css'; */
+/* @import 'FullImgTxt/style.css'; */
+/* @import 'FullImgTxt/editor.css'; */
 @import 'instagramFeed/style.css';
 @import 'instagramFeed/editor.css';
 @import 'products/style.css';

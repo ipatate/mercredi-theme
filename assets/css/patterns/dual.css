@@ -1,20 +1,24 @@
 /** white block */
 
+.gm-dual-menu-block,
 .gm-dual-white-block,
 .gm-dual-accent-block {
   @apply grid h-auto lg:grid-cols-2;
 }
 
+.gm-dual-menu-block > div,
 .gm-dual-accent-block > div,
 .gm-dual-white-block > div {
   @apply m-0;
 }
 
+.gm-dual-menu-block > div figcaption,
 .gm-dual-accent-block > div figcaption,
 .gm-dual-white-block > div figcaption {
   @apply hidden;
 }
 
+.gm-dual-menu-block > div:first-child,
 .gm-dual-accent-block > div:first-child,
 .gm-dual-white-block > div:first-child {
   @apply flex flex-col justify-center p-0 lg:py-10;
@@ -40,12 +44,15 @@
 
 /** image */
 
+.gm-dual-menu-block > div:last-child figure,
 .gm-dual-accent-block > div:last-child figure,
 .gm-dual-white-block > div:last-child figure {
   @apply flex w-full h-full overflow-hidden;
 }
 
-.gm-dual-accent-block > div:last-child figure img {
+.gm-dual-manu-block > div:last-child figure img,
+.gm-dual-accent-block > div:last-child figure img,
+.gm-dual-white-block > div:last-child figure img {
   @apply object-cover w-full;
 }
 
@@ -54,10 +61,46 @@
   @apply mt-10 w-36;
 }
 
+.gm-dual-menu-block.gm-block-reverse > div:first-child,
 .gm-dual-accent-block.gm-block-reverse > div:first-child {
   @apply row-start-1 lg:col-start-2;
 }
 
+.gm-dual-menu-block.gm-block-reverse > div:last-child,
 .gm-dual-accent-block.gm-block-reverse > div:last-child {
   @apply col-start-1 lg:row-start-1;
+}
+
+/** dual menu */
+.gm-dual-menu-block > div:first-child > div:first-child .wp-block-buttons {
+  @apply relative flex flex-col items-center;
+}
+
+.gm-dual-menu-block > div:first-child {
+  @apply p-16;
+}
+
+.gm-dual-menu-block > div:first-child > div:first-child {
+  @apply flex flex-col justify-center min-h-full p-10;
+}
+
+.gm-dual-menu-block
+  > div:first-child
+  > div:first-child
+  .wp-block-buttons
+  .wp-block-button {
+  @apply min-w-[50%];
+}
+
+.gm-dual-menu-block
+  > div:first-child
+  > div:first-child
+  .wp-block-buttons
+  .wp-block-button
+  a {
+  @apply w-full text-center;
+}
+
+.gm-dual-menu-block > div:first-child > div:first-child .wp-block-buttons {
+  @apply mt-14;
 }
